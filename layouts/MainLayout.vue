@@ -133,12 +133,8 @@
               class="absolute flex items-center justify-center -right-[3px] top-0 bg-[#FF4646] h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full"
               >0</span
             >
-            <div class="min-w-[40px]">
-              <icon
-                name="ph:shopping-cart-simple-light"
-                size="33"
-                :color="isCartHover ? '#ff4646' : ''"
-              />
+            <div class="min-w-[40px] mt-2 hover:text-[#FF4646]">
+              <icon name="ph:shopping-cart-simple-light" size="33" />
             </div>
           </button>
         </NuxtLink>
@@ -157,7 +153,7 @@
   <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]" />
   <slot />
 
-  <footer v-if="!userStore.isLoading" />
+  <footer />
 </template>
 
 <script setup>
@@ -166,6 +162,6 @@ const userStore = useUserStore();
 
 let isAccountMenu = ref(false);
 let isCartHover = ref(false);
-let isSearching = ref(true);
+let isSearching = ref(false);
 let searchItem = ref("");
 </script>
