@@ -13,6 +13,7 @@
     "seed": "node prisma/seed.js"
   },
   "dependencies": {
+    "@iconify-json/material-symbols": "^1.2.15",
     "@nuxt/icon": "^1.10.3",
     "@nuxtjs/supabase": "^1.5.0",
     "@nuxtjs/tailwindcss": "^6.13.1",
