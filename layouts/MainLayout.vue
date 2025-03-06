@@ -83,7 +83,7 @@
         <div class="max-w-[700px] w-full md:block hidden">
           <div class="relative">
             <div
-              class="flex items-center border-2 border-[#FF4646] rounded-md w-full"
+              class="flex items-center border-2 border-[#F7DC99] rounded-md w-full"
             >
               <input
                 class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none"
@@ -98,7 +98,7 @@
                 class="mr-2"
               />
               <button
-                class="flex items-center h-[100%] text-white p-1.5 bg-[#FF4646]"
+                class="flex items-center h-[100%] text-[#535960] p-1.5 bg-[#F7DC99]"
               >
                 <Icon name="ph:magnifying-glass" size="20" />
               </button>
@@ -130,10 +130,10 @@
             @mouseleave="isCartHover = false"
           >
             <span
-              class="absolute flex items-center justify-center -right-[3px] top-0 bg-[#FF4646] h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full"
+              class="absolute flex items-center justify-center -right-[3px] top-0 bg-[#F7DC99] h-[17px] min-w-[17px] text-xs text-[#535960] px-0.5 rounded-full"
               >0</span
             >
-            <div class="min-w-[40px] mt-2 hover:text-[#FF4646]">
+            <div class="min-w-[40px] mt-2 hover:text-[#F7DC99]">
               <icon name="ph:shopping-cart-simple-light" size="33" />
             </div>
           </button>
