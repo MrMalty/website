@@ -15,7 +15,10 @@
         @click="login('google')"
         class="flex items-center justify-center gap-3 p-1.5 w-full border hover:bg-gray-100 rouded-full text-lg font-semibold"
       >
-        <img src="/public/images/google-logo.png" class="w-full max-w-[30px]" />
+        <img
+          src="/public/images/google-logo.png"
+          class="w-[20px] max-w-[20px]"
+        />
         <div>Google</div>
       </button>
     </div>
