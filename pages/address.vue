@@ -66,8 +66,8 @@ let city = ref(null);
 let country = ref(null);
 
 let currentAddress = ref(null);
-let isUpdate = ref(null);
-let isWorking = ref(null);
+let isUpdate = ref(false);
+let isWorking = ref(false);
 let error = ref(null);
 
 watchEffect(() => {

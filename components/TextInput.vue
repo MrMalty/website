@@ -4,9 +4,9 @@
       <input
         :placeholder="placeholder"
         :maxlength="max"
-        class="w-full bg-white text-gray-800 border text-sm border=[#eff0eb] rounded-lg p-3 placeholder-gray-500 focus:outline-none"
+        class="w-full bg-white text-gray-800 border text-sm border-[#eff0eb] rounded-lg p-3 placeholder-gray-500 focus:outline-none"
         @focus="isFocused = true"
-        @blue="isFocused = false"
+        @blur="isFocused = false"
         :class="({ 'border-gray-900': isFocused }, { 'border-red-500': error })"
         :type="inputType"
         v-model="inputComputed"
@@ -29,6 +29,7 @@ const props = defineProps([
   "inputType",
   "error",
 ]);
+
 const { input, placeholder, max, inputType, error } = toRefs(props);
 
 let isFocused = ref(false);
