@@ -21,6 +21,7 @@
                 :class="currentImage === image ? 'border-[#FF5353]' : ''"
                 :src="image"
               />
+              {{ image }}
             </div>
           </div>
         </div>
