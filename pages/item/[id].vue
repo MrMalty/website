@@ -8,6 +8,7 @@
             class="rounded-lg object-fit"
             :src="currentImage"
           />
+          {{ currentImage }}
           <div
             v-if="images[0] !== ''"
             class="flex items-center justify-center mt-2"
@@ -21,7 +22,6 @@
                 :class="currentImage === image ? 'border-[#FF5353]' : ''"
                 :src="image"
               />
-              {{ currentImage }}
             </div>
           </div>
         </div>
