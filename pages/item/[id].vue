@@ -8,7 +8,7 @@
             class="rounded-lg object-fit"
             :src="currentImage"
           />
-          {{ currentImage }}
+          <p>- {{ currentImage }} -</p>
           <div
             v-if="images[0] !== ''"
             class="flex items-center justify-center mt-2"
