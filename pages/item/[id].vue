@@ -135,7 +135,7 @@ const images = ref([
   "https://picsum.photos/id/99/800/800",
   "https://picsum.photos/id/144/800/800",
 ]);
-
+//
 const addToCart = () => {
   userStore.cart.push(product.value.data);
 };
