@@ -9,7 +9,9 @@
       <p>{{ product.description }}</p>
     </div>
     <div class="">
-      <button class="add-to-cart">Add to Cart</button>
+      <router-link :to="/products/ + product.id">
+        <button class="add-to-cart">Add to Cart</button>
+      </router-link>
     </div>
   </div>
   <div v-else>
