@@ -1,9 +1,17 @@
 <template>
-  <div class="max-w-[1280px] items-center justify-between">
-    <Header />
+  <NavBar />
+  <div class="page-wrap">
+    <router-view></router-view>
   </div>
 </template>
 
-<script setup>
-import Header from './components/Header.vue'
+<script>
+import NavBar from "@/components/NavBar.vue";
+
+export default {
+  name: "App",
+  components: {
+    NavBar,
+  },
+};
 </script>
