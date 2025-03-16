@@ -10,21 +10,26 @@
 }
 
 button {
-  background-color: #727B85;
-  border: none;
-  border-radius: 8px;
-  color: #F8D16B;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 2px solid #727B85;
+  display: inline-block;
   cursor: pointer;
-  font-size: 16px;
+  color: #F2967C;
+  font-family: Arial;
+  font-size: 15px;
   font-weight: bold;
-  outline: 0;
-  padding: 16px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  padding: 10px;
 }
 
 h1 {
   border-bottom: 1px solid #F2967C;
   margin: 0;
-  margin-top: 66px;
+  margin-top: 16px;
   padding: 16px;
   color: #727B85;
 }
@@ -97,7 +102,7 @@ h1 {
 }
 
 .nav-bar {
-  height: 75px;
+  height: 120px;
   width: 100%;
 }
 
