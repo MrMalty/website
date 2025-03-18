@@ -81,6 +81,12 @@ h1 {
 
 }
 
+@media only screen and (max-width: 500px) {
+    .imag-wrap img{
+      width: 150px;
+    }
+}
+
 .product-details {
   padding: 16px;
   position: relative;
