@@ -120,8 +120,8 @@ h1 {
   width: 600px;
 }
 
-@media only screen and (max-dth: 500px) {
-  .logo-wrap img {width: 200px;}
+@media only screen and (max-width: 500px) {
+  .logo-wrap img {width: 100px;}
 }
 
 .products-link {
