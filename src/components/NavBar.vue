@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar">
     <div class="logo-wrap">
-      <router-link to="/" class="product-link">
+      <router-link to="/">
         <img :src="logo" />
       </router-link>
     </div>
