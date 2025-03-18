@@ -121,7 +121,7 @@ h1 {
 }
 
 @media only screen and (max-width: 500px) {
-  .logo-wrap img {width: 250px;}
+  .logo-wrap img {width: 300px;}
 }
 
 .products-link {

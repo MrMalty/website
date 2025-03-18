@@ -5,7 +5,7 @@
         <img :src="logo" />
       </router-link>
     </div>
-    <router-link to="/cart" class="cart-link"> Shopping Cart </router-link>
+    <router-link to="/cart" class="cart-link">Cart</router-link>
   </div>
 </template>
 
