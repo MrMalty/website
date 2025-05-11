@@ -88,7 +88,8 @@ let currentImage = ref(null);
 
 onMounted(() => {
   watchEffect(() => {
-    images.value[0] = "https://picsum.photos/id/77/800/800";
+    images.value[0] =
+      "https://www.kiallacomputers.com.au/products/612rSGQ8zkL.jpg";
   });
 });
 
