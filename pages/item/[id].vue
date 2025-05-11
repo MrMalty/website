@@ -2,7 +2,7 @@
   <MainLayout>
     <div id="ItemPage" class="mt-4 max-w-[1200px] mx-auto px-2">
       <div class="md:flex gap-4 justify-between mx-auto w-full">
-        <div class="md:w-[40%]">
+        <div class="md:w-[30%]">
           <img
             v-if="currentImage"
             class="rounded-lg object-fit"
@@ -24,12 +24,12 @@
             </div>
           </div>
         </div>
-        <div class="md:w-[60%] bg-white p-3 rounded-lg">
+        <div class="md:w-[60%] bg-[#B7CEE2] p-3 rounded-lg">
           <div v-if="true">
             <p class="mb-2">Title</p>
             <p class="font-light text-[12px] mb-2">Description Section</p>
           </div>
-          <div class="flex items-center pt-1.5">
+          <!--<div class="flex items-center pt-1.5">
             <span class="h-4 min-w-4 rounded-full p-0.5 bg-[#FFD000] mr-2">
               <Icon
                 name="material-symbols:star-rounded"
@@ -37,16 +37,16 @@
                 size="12"
               />
             </span>
-            <!--<p class="text-[#FF5353]">Extra 5% off</p>-->
-          </div>
+            <p class="text-[#FF5353]">Extra 5% off</p>
+          </div>-->
           <div class="flex items-center justify-start my-2">
             <Icon name="ic:baseline-star" color="#FF5353" />
             <Icon name="ic:baseline-star" color="#FF5353" />
             <Icon name="ic:baseline-star" color="#FF5353" />
             <Icon name="ic:baseline-star" color="#FF5353" />
             <Icon name="ic:baseline-star" color="#FF5353" />
-            <span class="text-[13px] font-light ml-2"
-              >5 213 Reviews 1,000+ orders
+            <span class="text-[13px] font-light ml-2">
+              5 213 Reviews 1,000+ orders
             </span>
           </div>
           <div class="border-b" />
