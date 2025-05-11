@@ -37,7 +37,7 @@
                 size="12"
               />
             </span>
-            <p class="text-[#FF5353]">Extra 5% off</p>
+            <!--<p class="text-[#FF5353]">Extra 5% off</p>-->
           </div>
           <div class="flex items-center justify-start my-2">
             <Icon name="ic:baseline-star" color="#FF5353" />
@@ -55,13 +55,13 @@
             <div class="text-4xl font-bold">${{ priceComputed }}</div>
             <span
               class="bg-[#F5F5F5] border text-[#0E2167] text-[12px] font-semibold px-1.5 rounded-sm"
-              >70% off</span
+              >50% off</span
             >
           </div>
-          <p class="text-[#23AAEF] text-xs font-semibold pt-1">
+          <!--          <p class="text-[#23AAEF] text-xs font-semibold pt-1">
             Free 11-day Delivery over $100.00
           </p>
-          <p class="text-[#23AAEF] text-xs font-semibold pt-1">Free Shipping</p>
+          <p class="text-[#23AAEF] text-xs font-semibold pt-1">Free Shipping</p>-->
           <div class="py-2" />
           <button
             @click="addToCart()"
