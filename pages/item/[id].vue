@@ -106,14 +106,14 @@ const priceComputed = computed(() => {
   return "26.40";
 });
 
-const images = ref([
-  "",
-  "http://localhost:3000/products/1.png",
-  "https://picsum.photos/id/233/800/800",
-  "https://picsum.photos/id/165/800/800",
-  "https://picsum.photos/id/99/800/800",
-  "https://picsum.photos/id/144/800/800",
-]);
+// const images = ref([
+//   "",
+//   "http://localhost:3000/products/1.png",
+//   "https://picsum.photos/id/233/800/800",
+//   "https://picsum.photos/id/165/800/800",
+//   "https://picsum.photos/id/99/800/800",
+//   "https://picsum.photos/id/144/800/800",
+// ]);
 
 const addToCart = () => {
   alert("ADDED");
