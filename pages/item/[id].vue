@@ -12,6 +12,7 @@
             v-if="images[0] !== ''"
             class="flex items-center justify-center mt-2"
           >
+            <!--
             <div v-for="image in images">
               <img
                 @mouseover="currentImage = image"
@@ -21,7 +22,7 @@
                 :class="currentImage === image ? 'border-[#FF5353]' : ''"
                 :src="image"
               />
-            </div>
+            </div>-->
           </div>
         </div>
         <div class="md:w-[60%] bg-white p-3 rounded-lg">
