@@ -54,7 +54,7 @@
           <div class="flex items-center justify-start gap-2 my-2">
             <div class="text-4xl font-bold">${{ priceComputed }}</div>
             <span
-              class="bg-[#F5F5F5] border text-[#0E2167] text-[12px] font-semibold px-1.5 rounded-sm"
+              class="bg-[#F5F5F5] border text-[#0E2167] text-[12px] font-semibold px-1.5 rounded-lg"
               >50% off</span
             >
           </div>
