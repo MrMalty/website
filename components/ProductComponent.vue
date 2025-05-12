@@ -12,7 +12,7 @@
             >${{ oldPriceComputed }}</span
           >
         </span>
-        <span
+        <!-- <span
           class="px-1 relative -top-1.5 text-[#0E2167] text-xs font-semibold"
         >
           Extra 5% off
@@ -26,7 +26,7 @@
             class="bg-[#F5F5F5] border text-[#23AAEF] text-[9px] font-semibold px-1.5 rounded-sm"
             >Top Selling</span
           >
-        </div>
+        </div>-->
         <p class="flex items-center px-1 pt-0.5 text-xs text-[#252525]">
           5,000+ Sold
           <Icon
