@@ -120,9 +120,66 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
+exports.Prisma.AddressesScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  name: 'name',
+  address: 'address',
+  zipcode: 'zipcode',
+  city: 'city',
+  country: 'country',
+  created_at: 'created_at'
+};
+
+exports.Prisma.OrdersScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  stripeId: 'stripeId',
+  name: 'name',
+  address: 'address',
+  zipcode: 'zipcode',
+  city: 'city',
+  country: 'country',
+  created_at: 'created_at'
+};
+
+exports.Prisma.OrderItemScalarFieldEnum = {
+  id: 'id',
+  orderId: 'orderId',
+  productId: 'productId',
+  created_at: 'created_at'
+};
+
+exports.Prisma.ProductsScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  description: 'description',
+  url: 'url',
+  price: 'price',
+  created_at: 'created_at'
+};
+
+exports.Prisma.SortOrder = {
+  asc: 'asc',
+  desc: 'desc'
+};
+
+exports.Prisma.QueryMode = {
+  default: 'default',
+  insensitive: 'insensitive'
+};
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
-
+  Addresses: 'Addresses',
+  Orders: 'Orders',
+  OrderItem: 'OrderItem',
+  Products: 'Products'
 };
 
 /**
