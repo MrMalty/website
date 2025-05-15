@@ -25,9 +25,11 @@
           </div>
         </div>
         <div class="md:w-[60%] bg-[#B7CEE2] p-3 rounded-lg">
-          <div v-if="true">
-            <p class="mb-2">Title</p>
-            <p class="font-light text-[12px] mb-2">Description Section</p>
+          <div v-if="product && product.data">
+            <p class="mb-2">{{ product.data.title }}</p>
+            <p class="font-light text-[12px] mb-2">
+              {{ product.data.description }}
+            </p>
           </div>
           <!--<div class="flex items-center pt-1.5">
             <span class="h-4 min-w-4 rounded-full p-0.5 bg-[#FFD000] mr-2">
@@ -84,13 +86,21 @@ const userStore = useUserStore();
 
 const route = useRoute();
 
+let product = ref(null);
 let currentImage = ref(null);
 
-onMounted(() => {
-  watchEffect(() => {
-    images.value[0] =
-      "https://www.kiallacomputers.com.au/products/612rSGQ8zkL.jpg";
-  });
+onBeforeMount(async () => {
+  product.value = await useFetch(
+    `/api/prisma/get-product-by-id/${route.params.id}`
+  );
+});
+
+watchEffect(() => {
+  if (product.value && product.value.data) {
+    currentImage.value = product.value.data.url;
+    images.value[0] = product.value.data.url;
+    userStore.isLoading = false;
+  }
 });
 
 const isInCart = computed(() => {
@@ -104,14 +114,15 @@ const isInCart = computed(() => {
 });
 
 const priceComputed = computed(() => {
-  return "26.40";
+  if (product.value && product.value.data) {
+    return product.value.data.price / 100;
+  }
+  return "0.00";
 });
 
-const images = ref([
-  "https://www.kiallacomputers.com.au/products/612rSGQ8zkL.jpg",
-]);
+const images = ref([]);
 
 const addToCart = () => {
-  alert("ADDED");
+  userStore.cart.push(product.value.data);
 };
 </script>
