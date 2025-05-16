@@ -173,9 +173,8 @@
 import { useUserStore } from "~/stores/user";
 const userStore = useUserStore();
 
-
 let isAccountMenu = ref(false);
 let isCartHover = ref(false);
 let searchItem = ref("");
-let isSearching = ref(true);
+let isSearching = ref(false);
 </script>
