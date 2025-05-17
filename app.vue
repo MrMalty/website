@@ -18,7 +18,7 @@
 <script setup>
 import { useUserStore } from "~/stores/user";
 const userStore = useUserStore();
-// dfd
+
 const route = useRoute();
 
 let windowWidth = ref(process.client ? window.innerWidth : "");
