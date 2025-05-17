@@ -139,7 +139,7 @@
             <span
               class="mt-1 absolute flex items-center justify-center -right-[3px] top-0 bg-[#FF4646] h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full"
             >
-              0
+              {{ userStore.cart.length }}
             </span>
             <div class="min-w-[40px] mt-3">
               <Icon
@@ -177,4 +177,26 @@ let isAccountMenu = ref(false);
 let isCartHover = ref(false);
 let searchItem = ref("");
 let isSearching = ref(false);
+
+const searchByName = useDebounce(async () => {
+  isSearching.value = true;
+  items.value = await useFetch(
+    `/api/prisma/search-by-name/${searchItem.value}`
+  );
+  isSearching.value = false;
+}, 100);
+
+watch(
+  () => searchItem.value,
+  async () => {
+    if (!searchItem.value) {
+      setTimeout(() => {
+        items.value = "";
+        isSearching.value = false;
+        return;
+      }, 500);
+    }
+    searchByName();
+  }
+);
 </script>

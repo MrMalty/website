@@ -27,7 +27,7 @@
             </div>
           </div>
           <div id="Items" class="bg-[#B7CEE2] rounded-lg p-4 mt-4">
-            <div v-for="product in products">
+            <div v-for="product in userStore.cart">
               <CartItem
                 :product="product"
                 :selectedArrau="selectedArray"
