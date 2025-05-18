@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
+// .
 // https://www.youtube.com/watch?v=dVcCRFVhz74
 
 export default defineNuxtConfig({
