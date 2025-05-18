@@ -74,6 +74,7 @@ const userStore = useUserStore();
 // const user = useSupabaseUser();
 
 const user = false;
+
 const goTo = (url) => {
   userStore.isMenuOverlay = false;
   return navigateTo(`/${url}`);
