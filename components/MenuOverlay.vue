@@ -70,7 +70,7 @@
 import { useUserStore } from "~/stores/user";
 const userStore = useUserStore();
 
-//const client = useSupabaseClient();
+// const client = useSupabaseClient();
 // const user = useSupabaseUser();
 
 const user = false;

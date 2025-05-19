@@ -120,20 +120,20 @@ const goToCheckout = () => {
   return navigateTo("/checkout");
 };
 
-const products = [
-  {
-    id: 1,
-    title: "Title 1",
-    description: "This is a description",
-    url: "https://www.kiallacomputers.com.au/products/612rSGQ8zkL.jpg",
-    price: 9899,
-  },
-  {
-    id: 2,
-    title: "Title 2",
-    description: "This is a description",
-    url: "https://www.kiallacomputers.com.au/products/gartx5090ato.jpg",
-    price: 9699,
-  },
-];
+// const products = [
+//   {
+//     id: 1,
+//     title: "Title 1",
+//     description: "This is a description",
+//     url: "https://www.kiallacomputers.com.au/products/612rSGQ8zkL.jpg",
+//     price: 9899,
+//   },
+//   {
+//     id: 2,
+//     title: "Title 2",
+//     description: "This is a description",
+//     url: "https://www.kiallacomputers.com.au/products/gartx5090ato.jpg",
+//     price: 9699,
+//   },
+// ];
 </script>
