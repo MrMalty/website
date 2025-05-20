@@ -12,11 +12,20 @@
             >${{ oldPriceComputed }}</span
           >
         </span>
-        <!-- <span
-          class="px-1 relative -top-1.5 text-[#0E2167] text-xs font-semibold"
+        <span
+          v-if="product.instock === 'false'"
+          class="px-1 relative -top-1.5 text-[#E93131] text-xs font-semibold"
         >
-          Extra 5% off
+          Back Order
         </span>
+        <span
+          v-if="product.instock === 'true'"
+          class="px-1 relative -top-1.5 text-[#68E931] text-xs font-semibold"
+        >
+          In Stock
+        </span>
+
+        <!--
         <div class="flex items-center gap-1 px-1 relative -top-1">
           <span
             class="bg-[#0E2167] text-white text-[9px] font-semibold px-1.5 rounded-sm"
@@ -39,9 +48,9 @@
         <p class="px-1 pt-0.5 text-xs text-[#23AAEF]">
           {{ product.title.substring(0, 60) }}
         </p>
-        <p class="px-1 pb-1">
-          <span class="text-[#009A66] text-xs font-semibold"
-            >Free Shipping</span
+        <p v-if="product.instock === 'false'" class="px-1 pb-1">
+          <span class="text-[#E93131] text-xs font-semibold"
+            >3-4 Days on Order</span
           >
         </p>
       </div>

@@ -99,7 +99,11 @@ watchEffect(() => {
   if (product.value && product.value.data) {
     currentImage.value = product.value.data.url;
     images.value[0] = product.value.data.url;
+    product.value.data.images.forEach((image) => {
+      images.value.push(image);
+    });
     userStore.isLoading = false;
+    console.log(images);
   }
 });
 
