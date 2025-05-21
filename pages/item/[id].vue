@@ -28,7 +28,7 @@
           <div v-if="product && product.data">
             <p class="mb-2">{{ product.data.title }}</p>
             <p
-              class="font-light text-[12px] mb-2"
+              class="font-light text-[16px] mb-2"
               v-html="product.data.description"
             ></p>
           </div>
