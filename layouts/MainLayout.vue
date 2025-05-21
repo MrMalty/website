@@ -46,7 +46,7 @@
             v-if="isAccountMenu"
             class="absolute bg-white w-[220px] text-[#0E2167] z-40 top-[38px] -left-[100px] border-x border-b"
           >
-            <div v-if="true">
+            <div v-if="!user">
               <div class="text-semibold text-[15px] my-4 px-3">
                 Welcome to Kialla Computers!
               </div>
@@ -68,7 +68,8 @@
                 My Orders
               </li>
               <li
-                v-if="true"
+                v-if="user"
+                @click="client.auth.signOut()"
                 class="text-[13px] py-2 px-4 w-full hover:bg-gray-200"
               >
                 Sign Out
@@ -110,20 +111,20 @@
               </button>
             </div>
             <div class="absolute bg-white max-w-[700px] h-auto w-full">
-              <div v-if="false" class="p-1">
+              <div
+                v-if="items && items.data"
+                v-for="item in items.data"
+                class="p-1"
+              >
                 <NuxtLink
-                  to="`/item/1`"
+                  to="`/item/${item.id}`"
                   class="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100"
                 >
                   <div class="flex items-center">
-                    <img
-                      class="rounded-md"
-                      width="40"
-                      src="https://picsum.photos/id/82/300/320"
-                    />
-                    <div class="trancate ml-2">TESTING</div>
+                    <img class="rounded-md" width="40" :src="item.url" />
+                    <div class="trancate ml-2">{{ item.title }}</div>
                   </div>
-                  <div class="truncate">$89.00</div>
+                  <div class="truncate">${{ item.price / 100 }}</div>
                 </NuxtLink>
               </div>
             </div>
@@ -173,10 +174,14 @@
 import { useUserStore } from "~/stores/user";
 const userStore = useUserStore();
 
+// const client = useSupabaseClient();
+// const user = useSupabaseUser();
+
 let isAccountMenu = ref(false);
 let isCartHover = ref(false);
 let searchItem = ref("");
 let isSearching = ref(false);
+let items = ref(null);
 
 const searchByName = useDebounce(async () => {
   isSearching.value = true;
