@@ -30,7 +30,9 @@
             <p
               class="font-light text-[12px] mb-2"
               v-html="product.data.description"
-            ></p>
+            >
+              {{ product.data.description }}
+            </p>
           </div>
           <!--<div class="flex items-center pt-1.5">
             <span class="h-4 min-w-4 rounded-full p-0.5 bg-[#FFD000] mr-2">
