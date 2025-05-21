@@ -27,9 +27,10 @@
         <div class="md:w-[60%] bg-[#B7CEE2] p-3 rounded-lg">
           <div v-if="product && product.data">
             <p class="mb-2">{{ product.data.title }}</p>
-            <p class="font-light text-[12px] mb-2">
-              {{ product.data.description }}
-            </p>
+            <p
+              class="font-light text-[12px] mb-2"
+              v-html="product.data.description"
+            ></p>
           </div>
           <!--<div class="flex items-center pt-1.5">
             <span class="h-4 min-w-4 rounded-full p-0.5 bg-[#FFD000] mr-2">
@@ -55,10 +56,10 @@
 
           <div class="flex items-center justify-start gap-2 my-2">
             <div class="text-4xl font-bold">${{ priceComputed }}</div>
-            <span
+            <!--<span
               class="bg-[#F5F5F5] border text-[#0E2167] text-[12px] font-semibold px-1.5 rounded-lg"
               >50% off</span
-            >
+            >-->
           </div>
           <!--          <p class="text-[#23AAEF] text-xs font-semibold pt-1">
             Free 11-day Delivery over $100.00
