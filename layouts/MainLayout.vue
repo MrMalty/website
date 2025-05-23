@@ -117,7 +117,7 @@
                 class="p-1"
               >
                 <NuxtLink
-                  to="`/item/${item.id}`"
+                  :to="`/item/${item.id}`"
                   class="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100"
                 >
                   <div class="flex items-center">
