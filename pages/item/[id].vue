@@ -51,7 +51,7 @@
             <span class="text-[13px] font-light ml-2">
               5 213 Reviews 1,000+ orders
             </span>
-          </div>-->
+          </div> -->
           <div class="border-b" />
 
           <div class="flex items-center justify-start gap-2 my-2">
