@@ -6,7 +6,7 @@
           <div class="bg-[#CCDAE0] rounded-lg p-4">
             <div class="text-xl font-semibold mb-2">Shipping Address</div>
 
-            <div v-if="false">
+            <div v-if="currentAddress && currentAddress.data">
               <NuxtLink
                 to="/address"
                 class="flex items-center pb-2 text-blue-500 hover:text-red-400"
@@ -20,23 +20,23 @@
                 <ul class="text-xs">
                   <li class="flex items-center gap-2">
                     <div>Contact name:</div>
-                    <div class="font-bold">Test</div>
+                    <div class="font-bold">{{ currentAddres.data.name }}</div>
                   </li>
                   <li class="flex items-center gap-2">
                     <div>Address:</div>
-                    <div class="font-bold">Test</div>
+                    <div class="font-bold">{{ currentAddres.data.address }}</div>
                   </li>
                   <li class="flex items-center gap-2">
                     <div>Post Code:</div>
-                    <div class="font-bold">Test</div>
+                    <div class="font-bold">{{ currentAddres.data.zipcode }}</div>
                   </li>
                   <li class="flex items-center gap-2">
                     <div>City:</div>
-                    <div class="font-bold">Test</div>
+                    <div class="font-bold">{{ currentAddres.data.city }}</div>
                   </li>
                   <li class="flex items-center gap-2">
                     <div>Country:</div>
-                    <div class="font-bold">Test</div>
+                    <div class="font-bold">{{ currentAddres.data.country }}</div>
                   </li>
                 </ul>
               </div>
@@ -53,7 +53,7 @@
           </div>
 
           <div id="Items" class="bg-[#CCDAE0] rounded-lg p-4 mt-4">
-            <div v-for="product in products">
+            <div v-for="product in userStore.checkout">
               <CheckoutItem :product="product" />
             </div>
           </div>
@@ -114,6 +114,7 @@
 import MainLayout from "~/layouts/MainLayout.vue";
 import { useUserStore } from "~/stores/user";
 const userStore = useUserStore();
+const user = useSupabaseUser()
 const route = useRoute();
 
 let stripe = null;
@@ -124,6 +125,24 @@ let total = ref(0);
 let clientSecret = null;
 let currentAddress = ref(null);
 let isProcessing = ref(false);
+
+onBeforeMount(async () =>{
+  if (userStore.checkout.length < 1){
+    return navigateTo('/shoppingcart')
+  }
+  total.value = 0.00
+
+  if (user.value) {
+    currentAddress.value = await useFetch(`/api/prisma/get-address-by-user/${user.value.id})
+    setTimeout(() => userStore.isLoading = false, 200)
+  }
+})
+
+watchEffect(() => {
+  if (route.fullpath == '/checkout' && !user.value){
+    return navigateTo('/auth')
+  }
+})
 
 onMounted(() => {
   isProcessing.value = true;
@@ -149,20 +168,4 @@ const createOrder = async (stripeId) => {};
 
 const showError = (errorMsgText) => {};
 
-// const products = [
-//  {
-//    id: 1,
-//    title: "Title 1",
-//    description: "This is a description",
-//    url: "https://www.kiallacomputers.com.au/products/612rSGQ8zkL.jpg",
-//    price: 9899,
-//  },
-//  {
-//    id: 2,
-//    title: "Title 2",
-//    description: "This is a description",
-//    url: "https://www.kiallacomputers.com.au/products/gartx5090ato.jpg",
-//    price: 9699,
-//  },
-//];
 </script>
