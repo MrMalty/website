@@ -172,7 +172,7 @@
 
 <script setup>
 import { useUserStore } from "~/stores/user";
-// import { useSupabaseClient } from "@nuxtjs/supabase";
+
 const userStore = useUserStore();
 
 const client = useSupabaseClient();
