@@ -132,10 +132,10 @@ onBeforeMount(async () =>{
   }
   total.value = 0.00
 
-  if (user.value) {
-    currentAddress.value = await useFetch(`/api/prisma/get-address-by-user/${user.value.id})
-    setTimeout(() => userStore.isLoading = false, 200)
-  }
+    if (user.value) {
+        currentAddress.value = await useFetch(`/api/prisma/get-address-by-user/${user.value.id}`)
+        setTimeout(() => userStore.isLoading = false, 200)
+    }
 })
 
 watchEffect(() => {
