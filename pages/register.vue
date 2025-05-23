@@ -34,7 +34,7 @@
       </div>
       <div>
         <button
-          @click="signUp('email')"
+          @click="signUp"
           class="flex bg-[#B7CEE2] mb-5 mt-5 items-center justify-center gap-3 p-1.5 w-full border hover:bg-gray-100 rounded-full text-lg font-semibold"
         >
           <div>Submit</div>
