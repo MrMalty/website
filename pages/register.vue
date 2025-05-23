@@ -46,6 +46,15 @@
 
 <script setup>
 const signUp = async (data) => {
-  return navigateTo("/register");
+    try {
+  const { data, error} = await supabase.auth.signUp({
+     email: email.value,
+     password: password.value,
+  })
+  if (error) throw error;
+  } catch(error) {
+    console.error(error)
+  }
+  return navigateTo("/");
 };
 </script>
