@@ -6,6 +6,9 @@
     <NuxtLink :to="`/item/${product.id}`">
       <img class="rounded-t" :src="product.url" />
       <div id="ProductDetails">
+        <p class="px-1 pt-0.5 text-xs text-[#23AAEF]">
+          {{ product.title.substring(0, 60) }}
+        </p>
         <span class="flex items-center justify-start gap-3 px-1 pt-1">
           <span class="text-[#23AAEF] font-semibold">${{ priceComputed }}</span>
           <span class="text-[#0E2167] text-sm text-light line-through"
@@ -44,10 +47,10 @@
             class="ml-1.5"
           />
           4.7
-        </p>-->
+        </p>
         <p class="px-1 pt-0.5 text-xs text-[#23AAEF]">
           {{ product.title.substring(0, 60) }}
-        </p>
+        </p>-->
         <p v-if="product.instock === 'false'" class="px-1 pb-1">
           <span class="text-[#E93131] text-xs font-semibold"
             >3-4 Days on Order</span
