@@ -114,36 +114,36 @@ const submit = async () => {
     return;
   }
 
-  //   if (isUpdate.value) {
-  //     await useFetch(
-  //       `/api/prisma/update-address/${currentAddress.value.data.id}`,
-  //       {
-  //         method: "PATCH",
-  //         body: {
-  //           userId: user.value.id,
-  //           name: contactName.value,
-  //           address: address.value,
-  //           zipCode: zipCode.value,
-  //           city: city.value,
-  //           country: country.value,
-  //         },
-  //       }
-  //     );
-  //     isWorking = false;
-  //     return navigateTo("/checkout");
-  //   }
+    if (isUpdate.value) {
+      await useFetch(
+        `/api/prisma/update-address/${currentAddress.value.data.id}`,
+        {
+          method: "PATCH",
+          body: {
+            userId: user.value.id,
+            name: contactName.value,
+            address: address.value,
+            zipCode: zipCode.value,
+            city: city.value,
+            country: country.value,
+          },
+        }
+      );
+      isWorking = false;
+      return navigateTo("/checkout");
+    }
 
-  //   await useFetch("/api/prisma/add-address", {
-  //     method: "POST",
-  //     body: {
-  //       userId: user.value.id,
-  //       name: contactName.value,
-  //       address: address.value,
-  //       zipCode: zipCode.value,
-  //       city: city.value,
-  //       country: country.value,
-  //     },
-  //   });
+    await useFetch("/api/prisma/add-address", {
+      method: "POST",
+      body: {
+        userId: user.value.id,
+        name: contactName.value,
+        address: address.value,
+        zipCode: zipCode.value,
+        city: city.value,
+        country: country.value,
+      },
+    });
   isWorking = false;
   return navigateTo("/checkout");
 };
