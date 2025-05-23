@@ -41,7 +41,7 @@
               />
             </span>
             <p class="text-[#FF5353]">Extra 5% off</p>
-          </div>-->
+          </div>
           <div class="flex items-center justify-start my-2">
             <Icon name="ic:baseline-star" color="#FF5353" />
             <Icon name="ic:baseline-star" color="#FF5353" />
@@ -51,7 +51,7 @@
             <span class="text-[13px] font-light ml-2">
               5 213 Reviews 1,000+ orders
             </span>
-          </div>
+          </div>-->
           <div class="border-b" />
 
           <div class="flex items-center justify-start gap-2 my-2">
