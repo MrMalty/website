@@ -175,8 +175,8 @@ import { useUserStore } from "~/stores/user";
 // import { useSupabaseClient } from "@nuxtjs/supabase";
 const userStore = useUserStore();
 
-// const client = useSupabaseClient();
-// const user = useSupabaseUser();
+const client = useSupabaseClient();
+const user = useSupabaseUser();
 
 let isAccountMenu = ref(false);
 let isCartHover = ref(false);

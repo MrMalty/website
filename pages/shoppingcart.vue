@@ -1,11 +1,11 @@
 <template>
   <MainLayout>
     <div id="ShoppingCartPage" class="mt-4 max-w-[1200px] mx-auto px-2">
-      <div v-if="flase" class="h-[500px] flex items-center justify-center">
+      <div v-if="!userStore.cart.length" class="h-[500px] flex items-center justify-center">
         <div class="pt-20">
           <img class="mx-auto" width="250" src="/cart-empty.png" />
           <div class="text-xl text-center mt-4">No items yet?</div>
-          <div v-if="true" class="flex text-center">
+          <div v-if="!user" class="flex text-center">
             <NuxtLink
               to="/auth"
               class="bg-[#0E2167] text-[#23AAEF] w-full text-[21px] font-semibold p-1.5 rounded-full mt-4"
@@ -18,7 +18,7 @@
       <div v-else class="md:flex gap-4 justify-between mx-auto w-full">
         <div class="md:w-[65%]">
           <div class="bg-[#B7CEE2] rounded-lg p-4">
-            <div class="text-2xl font-bold mb-2">Shopping Cart (0)</div>
+            <div class="text-2xl font-bold mb-2">Shopping Cart ({{ userStore.cart.length }})</div>
           </div>
 
           <div class="bg-[#FEEEEF] rounded-full p-4 mt-4">
@@ -119,21 +119,4 @@ const goToCheckout = () => {
 
   return navigateTo("/checkout");
 };
-
-// const products = [
-//   {
-//     id: 1,
-//     title: "Title 1",
-//     description: "This is a description",
-//     url: "https://www.kiallacomputers.com.au/products/612rSGQ8zkL.jpg",
-//     price: 9899,
-//   },
-//   {
-//     id: 2,
-//     title: "Title 2",
-//     description: "This is a description",
-//     url: "https://www.kiallacomputers.com.au/products/gartx5090ato.jpg",
-//     price: 9699,
-//   },
-// ];
 </script>
