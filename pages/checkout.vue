@@ -160,7 +160,43 @@ watch(
   }
 );
 
-const stripeInit = async () => {};
+const stripeInit = async () => {
+  const runtimeConfig = useRuntimeConfig()
+  stripe = Stripe(runtimeConfig.stripePk);
+
+  let res = await $fetch('/api/stripe/paymentintent',{
+    method: 'POST',
+    body: {
+      amount: total.value,
+    }
+  })
+
+  clientSecret = res.client_secret
+
+  elements = stripe.elements();
+  var style = {
+    base: {
+      fontsize: "18px",
+    },
+    invalid: {
+      fontFamily: 'Arial', 'sans-serif',
+      color: "#EE4B2B",
+      iconColor: "#EE4B2B"
+    }
+  }
+  car = elements.create("card",{
+    hidePostalCode: true,
+    style: style
+  });
+
+  card.mount("#card-element");
+  card.on("change", function (event) {
+    document.querySelector("button").disabled = event.empty;
+    document.querySelector("#card-error").textContent = event.error ? event.error.message : "";
+  })
+
+  isProcessing.value = false
+};
 
 const pay = async () => {};
 
