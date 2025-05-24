@@ -25,18 +25,18 @@
 
                     <TextInput 
                         class="w-full mt-2"
-                        placeholder="Zip Code"
-                        v-model:input="zipCode"
-                        inputType="text"
-                        :error="error && error.type == 'zipCode' ? error.message : ''"
-                    />
-
-                    <TextInput 
-                        class="w-full mt-2"
                         placeholder="City"
                         v-model:input="city"
                         inputType="text"
                         :error="error && error.type == 'city' ? error.message : ''"
+                    />
+
+                    <TextInput 
+                        class="w-full mt-2"
+                        placeholder="Zip Code"
+                        v-model:input="zipCode"
+                        inputType="text"
+                        :error="error && error.type == 'zipCode' ? error.message : ''"
                     />
 
                     <TextInput 
