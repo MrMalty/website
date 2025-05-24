@@ -27,6 +27,9 @@
         >
           In Stock
         </span>
+          <span class="text-[#E93131] text-xs font-semibold"
+            >3-4 Days on Order</span
+          >
 
         <!--
         <div class="flex items-center gap-1 px-1 relative -top-1">
