@@ -126,12 +126,12 @@ let clientSecret = null;
 let currentAddress = ref(null);
 let isProcessing = ref(false);
 
-onBeforeMount(async () =>{
-  if (userStore.checkout.length < 1){
-    return navigateTo('/shoppingcart')
-  }
-  total.value = 0.00
+onBeforeMount(async () => {
+    if (userStore.checkout.length < 1) {
+        return navigateTo('/shoppingcart')
+    }
 
+    total.value = 0.00
     if (user.value) {
         currentAddress.value = await useFetch(`/api/prisma/get-address-by-user/${user.value.id}`)
         setTimeout(() => userStore.isLoading = false, 200)
