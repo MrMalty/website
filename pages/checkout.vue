@@ -20,23 +20,23 @@
                 <ul class="text-xs">
                   <li class="flex items-center gap-2">
                     <div>Contact name:</div>
-                    <div class="font-bold">{{ currentAddres.data.name }}</div>
+                    <div class="font-bold">{{ currentAddress.data.name }}</div>
                   </li>
                   <li class="flex items-center gap-2">
                     <div>Address:</div>
-                    <div class="font-bold">{{ currentAddres.data.address }}</div>
+                    <div class="font-bold">{{ currentAddress.data.address }}</div>
                   </li>
                   <li class="flex items-center gap-2">
                     <div>Post Code:</div>
-                    <div class="font-bold">{{ currentAddres.data.zipcode }}</div>
+                    <div class="font-bold">{{ currentAddress.data.zipcode }}</div>
                   </li>
                   <li class="flex items-center gap-2">
                     <div>City:</div>
-                    <div class="font-bold">{{ currentAddres.data.city }}</div>
+                    <div class="font-bold">{{ currentAddress.data.city }}</div>
                   </li>
                   <li class="flex items-center gap-2">
                     <div>Country:</div>
-                    <div class="font-bold">{{ currentAddres.data.country }}</div>
+                    <div class="font-bold">{{ currentAddress.data.country }}</div>
                   </li>
                 </ul>
               </div>
