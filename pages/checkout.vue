@@ -179,7 +179,7 @@ const stripeInit = async () => {
       fontsize: "18px",
     },
     invalid: {
-      fontFamily: 'Arial', 'sans-serif',
+      fontFamily: 'Arial, sans-serif',
       color: "#EE4B2B",
       iconColor: "#EE4B2B"
     }
