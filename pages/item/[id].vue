@@ -69,7 +69,7 @@
           <button
             @click="addToCart()"
             :disabled="isIncart"
-            class="px-6 py-2 rounded-lg text-white text-lg font-semibold bg-gradient-to-r from-[#0E2167] to-[#23AAEF]"
+            class="px-6 py-2 rounded-lg text-[#0E2167] text-lg font-semibold bg-[#23AAEF]"
           >
             <div v-if="isInCart">Is Added</div>
             <div v-else>Add to Cart</div>
