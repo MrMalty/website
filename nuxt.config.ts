@@ -16,11 +16,11 @@ export default defineNuxtConfig({
   supabase: {
     redirect: false // Try disabling automatic redirects
   },
-  runtimeConfig: {
-      public: {
-        stripePk: process.env.STRIPE_PK_KEY
-      }
-  },
+    runtimeConfig: {
+        public: {
+          stripePk: process.env.STRIPE_PK_KEY
+        }
+    },
   app: {
       head: {
         script: [
