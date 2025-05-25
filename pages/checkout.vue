@@ -100,16 +100,16 @@
                                 :disabled="isProcessing"
                                 type="submit"
                                 class="
-                                mt-4
-                                    bg-gradient-to-r 
-                                  from-[#FE630C] 
-                                  to-[#FF3200]
-                                    w-full 
-                                    text-white 
-                                    text-[21px] 
-                                    font-semibold 
-                                    p-1.5 
-                                    rounded-full
+                                  mt-4
+                                  bg-gradient-to-r 
+                                  from-[#0E2167] 
+                                  to-[#23AAEF]
+                                  w-full 
+                                  text-white 
+                                  text-[21px] 
+                                  font-semibold 
+                                  p-1.5 
+                                  rounded-full
                                 "
                                 :class="isProcessing ? 'opacity-70' : 'opacity-100'"
                             >
