@@ -134,20 +134,22 @@
 </template>
 
 <script setup>
-import MainLayout from "~/layouts/MainLayout.vue";
-import { useUserStore } from "~/stores/user";
-const userStore = useUserStore();
+import MainLayout from '~/layouts/MainLayout.vue';
+import { useUserStore } from '~/stores/user';
+const userStore = useUserStore()
 const user = useSupabaseUser()
-const route = useRoute();
+const route = useRoute()
 
-let stripe = null;
-let elements = null;
-let card = null;
-let form = null;
-let total = ref(0);
-let clientSecret = null;
-let currentAddress = ref(null);
-let isProcessing = ref(false);
+definePageMeta({ middleware: "auth" })
+
+let stripe = null
+let elements = null
+let card = null
+let form = null
+let total = ref(0)
+let clientSecret = null
+let currentAddress = ref(null)
+let isProcessing = ref(false)
 
 onBeforeMount(async () => {
     if (userStore.checkout.length < 1) {
@@ -162,27 +164,24 @@ onBeforeMount(async () => {
 })
 
 watchEffect(() => {
-  if (route.fullpath == '/checkout' && !user.value){
-    return navigateTo('/auth')
-  }
+    if (route.fullPath == '/checkout' && !user.value) {
+        return navigateTo('/auth')
+    }
 })
 
-onMounted(() => {
-  isProcessing.value = true;
-  userStore.checkout.forEach((item) => {
-    total.value += item.price;
-  });
-});
+onMounted(async () => {
+    isProcessing.value = true
 
-watch(
-  () => total.value,
-  () => {
+    userStore.checkout.forEach(item => {
+        total.value += item.price
+    })
+})
+
+watch(() => total.value, () => {
     if (total.value > 0) {
-      stripeInit();
+        stripeInit()
     }
-  }
-);
-
+})
 const stripeInit = async () => {
     const runtimeConfig = useRuntimeConfig()
     stripe = Stripe(runtimeConfig.stripePk);
