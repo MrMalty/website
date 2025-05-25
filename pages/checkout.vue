@@ -101,9 +101,11 @@
                                 type="submit"
                                 class="
                                   mt-4
-                                  bg-[#23AAEF]
+                                  bg-gradient-to-r 
+                                  from-[#0E2167] 
+                                  to-[#23AAEF]
                                   w-full 
-                                  text-[#0E2167]
+                                  text-white 
                                   text-[21px] 
                                   font-semibold 
                                   p-1.5 

@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-        <div class="md:w-[60%] bg-white p-3 rounded-lg">
+        <div class="md:w-[60%] bg-[#B7CEE2] p-3 rounded-lg">
           <div v-if="product && product.data">
             <p class="mb-2">{{ product.data.title }}</p>
             <p
@@ -69,7 +69,7 @@
           <button
             @click="addToCart()"
             :disabled="isIncart"
-            class="px-6 py-2 rounded-lg text-[#0E2167] text-lg font-semibold bg-[#23AAEF]"
+            class="px-6 py-2 rounded-lg text-[#0E2167] text-lg font-semibold bg-gradient-to-r from-[#0E2167] to-[#23AAEF]"
           >
             <div v-if="isInCart">Is Added</div>
             <div v-else>Add to Cart</div>
