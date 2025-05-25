@@ -89,7 +89,7 @@
                             <p
                               class="text-orange-700 text-center font-semibold"
                               >
-                              TEXT MODE</p>
+                              TEST MODE</p>
                             <p 
                                 id="card-error" 
                                 role="alert" 
