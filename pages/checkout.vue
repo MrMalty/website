@@ -198,10 +198,51 @@ const stripeInit = async () => {
   isProcessing.value = false
 };
 
-const pay = async () => {};
+const pay = async () => {
+    if (currentAddress.value && currentAddress.value.data == '') {
+        showError('Please add shipping address')
+        return 
+    }
+    isProcessing.value = true
+    
+    let result = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: { card: card },
+    })
 
-const createOrder = async (stripeId) => {};
+    if (result.error) {
+        showError(result.error.message);
+        isProcessing.value = false
+    } else {
+        await createOrder(result.paymentIntent.id)
+        userStore.cart = []
+        userStore.checkout = []
+        setTimeout(() => {
+            return navigateTo('/success')
+        }, 500)
+    }
+}
 
-const showError = (errorMsgText) => {};
+const createOrder = async (stripeId) => {
+    await useFetch('/api/prisma/create-order', {
+        method: "POST",
+        body: {
+            userId: user.value.id,
+            stripeId: stripeId,
+            name: currentAddress.value.data.name,
+            address: currentAddress.value.data.address,
+            zipcode: currentAddress.value.data.zipcode,
+            city: currentAddress.value.data.city,
+            country: currentAddress.value.data.country,
+            products: userStore.checkout
+        }
+    })
+}
+
+const showError = (errorMsgText) => {
+    let errorMsg = document.querySelector("#card-error");
+
+    errorMsg.textContent = errorMsgText;
+    setTimeout(() => { errorMsg.textContent = "" }, 4000);
+};
 
 </script>
