@@ -83,6 +83,7 @@
               id="card-element"
               class="border border-gray-500 p-2 rounded-sm"
             />
+            <p class="text-orange-700 text-center font-semibold">TEST MDOE</p>
             <p
               id="card-error"
               role="alert"
