@@ -140,7 +140,7 @@ const userStore = useUserStore()
 const user = useSupabaseUser()
 const route = useRoute()
 
-definePageMeta({ middleware: "auth" })
+//definePageMeta({ middleware: "auth" })
 
 let stripe = null
 let elements = null
@@ -182,6 +182,7 @@ watch(() => total.value, () => {
         stripeInit()
     }
 })
+
 const stripeInit = async () => {
     const runtimeConfig = useRuntimeConfig()
     stripe = Stripe(runtimeConfig.stripePk);
