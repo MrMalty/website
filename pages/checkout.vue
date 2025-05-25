@@ -121,9 +121,9 @@
                     </div>
 
                     <div class="bg-white rounded-lg p-4 mt-4">
-                        <div class="text-lg font-semibold mb-2 mt-2">AliExpress</div>
+                        <div class="text-lg font-semibold mb-2 mt-2">Kialla Computers</div>
                         <p class="my-2">
-                            AliExpress keeps your information and payment safe
+                            Kialla Computers keeps your information and payment safe
                         </p>
 
                     </div>
