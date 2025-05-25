@@ -3,7 +3,7 @@
     <div id="topMenu" class="w-full bg-[#FFFFFF] border-b md:block hidden">
       <ul
         class="flex items-center justify-end text-xs text-[#0E2167] font-light px-2 h-10 bg-[#FFFFFF] max-w-[1280px]"
-      >
+      ><!--
         <li
           class="border-r border-r-gray-400 px-3 hover:text-[#23AAEF] cursor-pointer"
         >
@@ -27,7 +27,7 @@
         <li class="px-3 hover:text-[23AAEF] cursor-pointer">
           <Icon name="ic:sharp-install-mobile" size="17" />
           App
-        </li>
+        </li>-->
         <li
           @mouseenter="isAccountMenu = true"
           @mouseleave="isAccountMenu = false"
