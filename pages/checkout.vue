@@ -187,7 +187,7 @@ const stripeInit = async () => {
     const runtimeConfig = useRuntimeConfig()
     stripe = Stripe(runtimeConfig.stripePk);
 
-    let res = await $fetch('/api/stripe/paymentintent', {
+    let res = await $fetch(`/api/stripe/paymentintent`, {
         method: 'POST',
         body: {
             amount: total.value,
@@ -247,7 +247,7 @@ const pay = async () => {
 }
 
 const createOrder = async (stripeId) => {
-    await useFetch('/api/prisma/create-order', {
+    await useFetch(`/api/prisma/create-order`, {
         method: "POST",
         body: {
             userId: user.value.id,
