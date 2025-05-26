@@ -1,60 +1,64 @@
+<!-- pages/signup.vue -->
 <template>
-  <div id="RegisterPage" class="w-full h-[100vh] bg-white">
-    <div
-      class="w-full flex items-center justify-center p-5 border-b border-b-gray-300"
-    >
-      <NuxtLink to="/" class="min-w-[170px]">
-        <img width="170" src="/kc_logo.png" />
-      </NuxtLink>
+    <div>
+      <h2>Create Account</h2>
+      
+      <form @submit.prevent="handleSignUp">
+        <div>
+          <label>Email</label>
+          <input type="email" v-model="email" required/>
+        </div>
+  
+        <div>
+          <label>Password</label>
+          <input type="password" v-model="password" required/>
+        </div>
+  
+        <button type="submit" :disabled="loading"> {{ loading ? 'Creating Account...' : 'Sign Up' }}</button>
+  
+        <p v-if="error">{{ error }}</p>
+      </form>
+  
+      <p> Already have an account? <NuxtLink to="/login">Login</NuxtLink>
+      </p>
     </div>
+  </template>
+  
+  <script setup>
+  const email = ref('')
+  const password = ref('')
+  const error = ref(null)
+  const loading = ref(false)
+  
+  const supabase = useSupabaseClient()
+  const user = useSupabaseUser()
 
-    <div class="max-w-[400px] mx-auto px-2">
-      <div class="text-center my-6">Register New User</div>
-      <div>Username:</div>
-      <div
-        class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
-      >
-        <input
-          class="w-full placeholder-[#23AAEF] text-sm pl-3 focus:outline-none h-8"
-          placeholder="Username"
-          type="text"
-          v-model="Username"
-        />
-      </div>
-      <div>Password:</div>
-      <div
-        class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
-      >
-        <input
-          class="w-full placeholder-[#23AAEF] text-sm pl-3 focus:outline-none h-8"
-          placeholder="Password"
-          type="password"
-          v-model="Password"
-        />
-      </div>
-      <div>
-        <button
-          @click="signUp"
-          class="flex bg-[#B7CEE2] mb-5 mt-5 items-center justify-center gap-3 p-1.5 w-full border hover:bg-gray-100 rounded-full text-lg font-semibold"
-        >
-          <div>Submit</div>
-        </button>
-      </div>
-    </div>
-  </div>
-</template>
 
-<script setup>
-const signUp = async (data) => {
+  const handleSignUp = async () => {
     try {
-  const { data, error} = await supabase.auth.signUp({
-     email: email.value,
-     password: password.value,
-  })
-  if (error) throw error;
-  } catch(error) {
-    console.error(error)
+      loading.value = true
+      error.value = null
+      
+      const { data, error: signUpError } = await supabase.auth.signUp({
+        email: email.value,
+        password: password.value
+      })
+  
+      if (signUpError) throw signUpError
+  
+      // Redirect to dashboard on success
+      navigateTo('/')
+    } catch (err) {
+      error.value = err.message
+    } finally {
+      loading.value = false
+    }
   }
-  return navigateTo("/");
-};
-</script>
+  
+  // Redirect if already logged in
+  onMounted(() => {
+    if (user.value) {
+      navigateTo('/')
+    }
+  })
+  </script>
