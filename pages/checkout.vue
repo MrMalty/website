@@ -99,7 +99,7 @@
               <button
                 :disabled="isProcessing"
                 type="submit"
-                class="mt-4 bg-gradient-to-r from-[#0E2167] to-[#23AAEF] w-full text-white text-[21px] font-semibold p-1.5 rounded-full"
+                class="mt-4 bg-[#23AAEF] w-full text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full"
                 :class="isProcessing ? 'opacity-70' : 'opacity-100'"
               >
                 <Icon v-if="isProcessing" name="eos-icons:loading" />
