@@ -29,6 +29,7 @@
                 <img class="w-full max-w-[30px]" src="/google-logo.png">
                 <div>Google</div>
             </button>
+            <div class="mt-3 mb-3 border-b-2 "/>
 
 <!-- Email Loging Section -->
             <div>
@@ -44,7 +45,7 @@
                 </form>
             </div>
             <div class="mt-3 mb-3 border-b-2 "/>
-            <p>To register, <NuxtLink to="/register">Click Here.</NuxtLink></p>
+            <p class="text-sm semibold">To register, <NuxtLink to="/register">Click Here.</NuxtLink></p>
 
         </div>
     </div>
