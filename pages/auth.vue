@@ -11,14 +11,12 @@
             <div>
                 <form @click="handleLogin">
                 <div class="flex items-center border-2 border-[#23AAEF] rounded-md w-full">
-                    <label>Email</label>
-                    <input type="email"  v-model="email" required/>
+                    <input class="w-full" placeholder="Email" type="email"  v-model="email" required/>
                 </div>
                 <div class="flex items-center border-2 border-[#23AAEF] rounded-md w-full">
-                    <label>Password</label>
-                    <input type="password" v-model="password" required/>
+                    <input class="w-full mt-2" placeholder="Passowrd" type="password" v-model="password" required/>
                 </div>
-                <button class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-4" type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
+                <button class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-2" type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
                 <p v-if="error">{{ error }}</p>
                 </form>
             </div>
