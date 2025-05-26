@@ -22,6 +22,7 @@
                 <p v-if="error">{{ error }}</p>
                 </form>
             </div>
+            <div class="mt-3 mb-3 border-b-2 "/>
 
             <button 
                 @click="login('google')"
