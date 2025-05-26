@@ -32,7 +32,7 @@
             <p v-if="error">{{ error }}</p>
             </form>
   
-            <p> Already have an account? <NuxtLink to="/login">Login</NuxtLink>
+            <p> Already have an account? <NuxtLink to="/auth">Login</NuxtLink>
             </p>
           </div>
         </div>
