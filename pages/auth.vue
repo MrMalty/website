@@ -8,43 +8,40 @@
 
         <div class="max-w-[400px] mx-auto px-2">
             <div class="text-center my-6">Login / Register</div>
-
+            <div>
+                <form @submit.prevent="handleLogin">
                 <div>
-                    <form @submit.prevent="handleLogin">
-                        <div>
-                            <label>Email</label>
-                            <input type="email"  v-model="email" required/>
-                        </div>
-  
-                       <div>
-                            <label>Password</label>
-                            <input type="password" v-model="password" required/>
-                        </div>
-                    <button type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
-                    <p v-if="error">{{ error }}</p>
-                    </form>
+                    <label>Email</label>
+                    <input type="email"  v-model="email" required/>
                 </div>
-
-                <button 
-                    @click="login('google')"
-                    class="
-                        flex 
-                        items-center 
-                        justify-center 
-                        gap-3
-                        p-1.5
-                        w-full 
-                        border 
-                        hover:bg-gray-100
-                        rounded-full
-                        text-lg
-                        font-semibold
-                    "
-                >
-                    <img class="w-full max-w-[30px]" src="/google-logo.png">
-                    <div>Google</div>
-                </button>
+                <div>
+                    <label>Password</label>
+                    <input type="password" v-model="password" required/>
+                </div>
+                <button type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
+                <p v-if="error">{{ error }}</p>
+                </form>
             </div>
+
+            <button 
+                @click="login('google')"
+                class="
+                    flex 
+                    items-center 
+                    justify-center 
+                    gap-3
+                    p-1.5
+                    w-full 
+                    border 
+                    hover:bg-gray-100
+                    rounded-full
+                    text-lg
+                    font-semibold
+                "
+            >
+                <img class="w-full max-w-[30px]" src="/google-logo.png">
+                <div>Google</div>
+            </button>
         </div>
     </div>
 </template>
@@ -54,24 +51,24 @@ const user = useSupabaseUser();
 
 const handleLogin = async () => {
     try {
-      loading.value = true
-      error.value = null
+      loading.value = true;
+      error.value = null;
       
       const { data, error: loginError } = await supabase.auth.signInWithPassword({
         email: email.value,
         password: password.value
-      })
+      });
   
-      if (loginError) throw loginError
+      if (loginError) throw loginError;
   
       // Redirect to Confirm Page to check user info
-      navigateTo('/confirm')
+      navigateTo('/');
     } catch (err) {
-      error.value = err.message
+      error.value = err.message;
     } finally {
-      loading.value = false
+      loading.value = false;
     }
-  }
+  };
 
 watchEffect(() => {
     if (user.value) {
