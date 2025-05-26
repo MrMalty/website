@@ -3,7 +3,7 @@
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="md:flex gap-4 justify-between w-full">
         <div class="md:w-[50%] pt-4">
-          <div class="text-lg font-semibold text-[#0E2167]">Help</div>
+          <div class="text-lg font-semibold text-[#0E2167] mb-5">Help</div>
         </div>
       </div>
     </div>
