@@ -71,19 +71,19 @@
     </div>
 </template>
 <script setup>
-const client = useSupabaseClient()
-const user = useSupabaseUser()
+const client = useSupabaseClient();
+const user = useSupabaseUser();
 
 watchEffect(() => {
     if (user.value) {
         return navigateTo('/')
     }
-})
+});
 
-const email = ref('')
-const password = ref('')
-const error = ref(null)
-const loading = ref(false)
+const email = ref('');
+const password = ref('');
+const error = ref(null);
+const loading = ref(false);
   
 const handleLogin = async () => {
     try {
@@ -93,7 +93,7 @@ const handleLogin = async () => {
         const { data, error: loginError } = await supabase.auth.signInWithPassword({
         email: email.value,
         password: password.value
-      })
+      });
   
       if (loginError) throw loginError
   
@@ -103,13 +103,13 @@ const handleLogin = async () => {
       error.value = err.message
     } finally {
       loading.value = false
-    }
-  }
+    };
+  };
 
 const login = async (prov) => {
   const { data, error } = await client.auth.signInWithOAuth({
     provider: prov,
     redirectTo: window.location.origin
-  })
-}
+  });
+};
 </script>
