@@ -21,6 +21,7 @@
                 </form>
             </div>
             <div class="mt-3 mb-3 border-b-2 "/>
+            <p>register with email if you do not have an account, <NutLink to="/register">Click Here.</NuxtLink></p>
 
             <button 
                 @click="login('google')"
