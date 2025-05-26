@@ -8,7 +8,7 @@
       </div>
     </div>
   </div>
-
+<!--
   <div
     ID="FooterSub"
     class="w-full bg-[#23AAEF] text-sm text-sm text-[#0E2167]"
@@ -18,6 +18,7 @@
       Use
     </div>
   </div>
+  -->
 </template>
 
 <script setup></script>
