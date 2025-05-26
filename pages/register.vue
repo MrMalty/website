@@ -13,12 +13,16 @@
             <h2>Create Account</h2>
       
             <form @submit.prevent="handleSignUp">
-            <div>
+            <div
+              class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
+            >
               <label>Email</label>
               <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="email" v-model="email" required/>
             </div>
   
-            <div>
+            <div
+              class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
+            >
              <label>Password</label>
               <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="password" v-model="password" required/>
             </div>
