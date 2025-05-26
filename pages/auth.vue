@@ -7,7 +7,6 @@
         </div>
 
         <div class="max-w-[400px] mx-auto px-2">
-
             <div class="text-center my-6">Login / Register</div>
                 <div>
                     <form @submit.prevent="handleLogin">
@@ -20,12 +19,10 @@
                             <label>Password</label>
                             <input type="password" v-model="password" required/>
                         </div>
-                    </div
+                </div>
                     <button type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
-  
                     <p v-if="error">{{ error }}</p>
                     </form>
-                </div>
             <button 
                 @click="login('google')"
                 class="
@@ -74,6 +71,27 @@
 const client = useSupabaseClient();
 const user = useSupabaseUser();
 
+const handleLogin = async () => {
+    try {
+      loading.value = true
+      error.value = null
+      
+      const { data, error: loginError } = await supabase.auth.signInWithPassword({
+        email: email.value,
+        password: password.value
+      })
+  
+      if (loginError) throw loginError
+  
+      // Redirect to Confirm Page to check user info
+      navigateTo('/confirm')
+    } catch (err) {
+      error.value = err.message
+    } finally {
+      loading.value = false
+    }
+  }
+  
 watchEffect(() => {
     if (user.value) {
         return navigateTo('/')
