@@ -50,7 +50,7 @@
             </div>
             <button
               @click="goToCheckout"
-              class="flex items-center justify-center bg-[#23AAEF] w-full text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-4"
+              class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-4"
             >
               Checkout
             </button>
