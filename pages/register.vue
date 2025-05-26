@@ -58,7 +58,7 @@
       if (signUpError) throw signUpError
   
       // Redirect to dashboard on success
-      navigateTo('/')
+      navigateTo('/auth')
     } catch (err) {
       error.value = err.message
     } finally {
