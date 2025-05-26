@@ -55,6 +55,7 @@ model Products {
   instock     String
   images      String[]
   price       Int
+  productcode String
   created_at  DateTime?  @default(now()) @db.Timestamptz(6)
   orderItem   OrderItem[]
 }
