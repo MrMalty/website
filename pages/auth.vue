@@ -9,7 +9,23 @@
         <div class="max-w-[400px] mx-auto px-2">
 
             <div class="text-center my-6">Login / Register</div>
-
+                <div>
+                    <form @submit.prevent="handleLogin">
+                        <div>
+                            <label>Email</label>
+                            <input type="email"  v-model="email" required/>
+                        </div>
+  
+                       <div>
+                            <label>Password</label>
+                            <input type="password" v-model="password" required/>
+                        </div>
+                    </div
+                    <button type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
+  
+                    <p v-if="error">{{ error }}</p>
+                    </form>
+                </div>
             <button 
                 @click="login('google')"
                 class="
@@ -63,6 +79,32 @@ watchEffect(() => {
         return navigateTo('/')
     }
 })
+
+const email = ref('')
+const password = ref('')
+const error = ref(null)
+const loading = ref(false)
+  
+const handleLogin = async () => {
+    try {
+        loading.value = true
+        error.value = null
+      
+        const { data, error: loginError } = await supabase.auth.signInWithPassword({
+        email: email.value,
+        password: password.value
+      })
+  
+      if (loginError) throw loginError
+  
+      // Redirect to Confirm Page to check user info
+      navigateTo('/confirm')
+    } catch (err) {
+      error.value = err.message
+    } finally {
+      loading.value = false
+    }
+  }
 
 const login = async (prov) => {
   const { data, error } = await client.auth.signInWithOAuth({
