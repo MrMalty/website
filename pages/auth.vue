@@ -45,7 +45,9 @@
                 </form>
             </div>
             <div class="mt-3 mb-3 border-b-2 "/>
+            <button class="flex icon=account items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-2" type="submit" :disabled="loading">Register</button>
             <p class="text-sm semibold">To register, <NuxtLink to="/register">Click Here.</NuxtLink></p>
+
 
         </div>
     </div>
