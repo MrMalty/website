@@ -27,6 +27,7 @@
         <div class="md:w-[60%] bg-[#B7CEE2] p-3 rounded-lg">
           <div v-if="product && product.data">
             <p class="mb-2">{{ product.data.title }}</p>
+            <p class="mb-2">{{ product.data.productcode }}</p>
             <p
               class="font-light text-[16px] mb-2"
               v-html="product.data.description"

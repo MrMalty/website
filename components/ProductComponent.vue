@@ -6,15 +6,15 @@
     <NuxtLink :to="`/item/${product.id}`">
       <img class="rounded-t" :src="product.url" />
       <div id="ProductDetails">
-        <p class="px-1 pt-0.5 text-xs text-[#23AAEF]">
+        <p class="px-1 pt-0.5 text-xs text-[#0E2167]">
           {{ product.title.substring(0, 60) }}
         </p>
-        <p class="px-1 pt-0.5 text-xs text-[#23AAEF]">
+        <p class="px-1 pt-0.5 text-xs text-[#0E2167]">
           {{ product.productcode }}
         </p>
         <span class="flex items-center justify-start gap-3 px-1 pt-1">
-          <span class="text-[#23AAEF] font-semibold">${{ priceComputed }}</span>
-          <span class="text-[#0E2167] text-sm text-light line-through"
+          <span class="text-[#0E2167] font-semibold">${{ priceComputed }}</span>
+          <span class="text-[#FF4646] text-sm text-light line-through"
             >${{ oldPriceComputed }}</span
           >
         </span>
