@@ -15,15 +15,15 @@
             <form @submit.prevent="handleSignUp">
             <div>
               <label>Email</label>
-              <input type="email" v-model="email" required/>
+              <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="email" v-model="email" required/>
             </div>
   
             <div>
              <label>Password</label>
-              <input type="password" v-model="password" required/>
+              <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="password" v-model="password" required/>
             </div>
   
-            <button type="submit" :disabled="loading"> {{ loading ? 'Creating Account...' : 'Sign Up' }}</button>
+            <button class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-4" type="submit" :disabled="loading"> {{ loading ? 'Creating Account...' : 'Sign Up' }}</button>
   
             <p v-if="error">{{ error }}</p>
             </form>
