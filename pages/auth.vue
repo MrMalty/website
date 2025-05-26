@@ -80,32 +80,6 @@ watchEffect(() => {
     }
 });
 
-const email = ref('');
-const password = ref('');
-const error = ref(null);
-const loading = ref(false);
-  
-const handleLogin = async () => {
-    try {
-        loading.value = true
-        error.value = null
-      
-        const { data, error: loginError } = await supabase.auth.signInWithPassword({
-        email: email.value,
-        password: password.value
-      });
-  
-      if (loginError) throw loginError
-  
-      // Redirect to Confirm Page to check user info
-      navigateTo('/confirm')
-    } catch (err) {
-      error.value = err.message
-    } finally {
-      loading.value = false
-    };
-  };
-
 const login = async (prov) => {
   const { data, error } = await client.auth.signInWithOAuth({
     provider: prov,
