@@ -78,7 +78,7 @@ const LoginEmail = async () => {
       if (error) throw error;
   
       // Redirect to Confirm Page to check user info
-      navigateTo('/');
+    //  navigateTo('/');
     } catch (err) {
         console.log(err.message)
       error.value = err.message
