@@ -62,7 +62,7 @@
     </div>
 </template>
 <script setup>
-const client = useSupabaseClient();
+const client = useSupabaseAuthClient();
 const user = useSupabaseUser();
 
 async function LoginEmail() {
