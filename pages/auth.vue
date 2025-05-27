@@ -74,7 +74,7 @@ async function signIn() {
     const { error } = await client.auth.signInWithPassword({
       email: email.value,
       password: password.value,
-    });
+    }, 500);
     if (error) {
       errorMsg.value = error.message;
     } else {
