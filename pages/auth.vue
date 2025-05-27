@@ -7,7 +7,7 @@
         </div>
 
         <div class="max-w-[400px] mx-auto px-2">
-            <div class="text-center my-6">Login / Register</div>
+            <div class="text-center my-6">Provider Login</div>
 
 <!-- google login section -->
             <button 
@@ -32,8 +32,8 @@
             </button>
 
 <!-- Email Loging Section -->
+            <div class="text-center my-6">Email Login</div>
             <div>
-                <p class="mt-5">Email Login</p>
                 <form @click="handleLogin">
                 <div class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2">
                     <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Email" type="email"  v-model="email" required/>
