@@ -29,7 +29,7 @@
                 <img class="w-full max-w-[30px]" src="/google-logo.png">
                 <div>Google</div>
             </button>
-            <div class="mt-3 mb-3 border-b-2 "/>
+            <div class="mt-3 mb-3 border-b-2 border-[#0E2167]"/>
 
 <!-- Email Loging Section -->
             <div>
@@ -40,11 +40,11 @@
                 <div class="flex items-center border-2 border-[#23AAEF] rounded-md w-full">
                     <input class="w-full mt-2" placeholder="Passowrd" type="password" v-model="password" required/>
                 </div>
-                <button class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-2" type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
+                <button class="flex items-center justify-center bg-[#FFFFFF] w-full border-2 border-[#0E2167] text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2" type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
                 <p v-if="error">{{ error }}</p>
                 </form>
             </div>
-            <div class="mt-3 mb-3 border-b-2 "/>
+            <div class="mt-3 mb-3 border-b-2 border-[#0E2167]"/>
             <div class="flex items-center justify-center bg-[#FFFFFF] border-2 border-[#0E2167] w-full text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2">
                 <icon name="mdi:account" /><NuxtLink to="/signup">Sign Up</NuxtLink>
             </div>
