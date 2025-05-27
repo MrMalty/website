@@ -51,7 +51,7 @@
                 <Icon v-if="loading" name="eos-icons:bubble-loading" />
                 <div v-else>Log In</div>
               </button>
-                <p v-if="error">{{ error }}</p>
+                <p v-if="errorMsg">{{ errorMsg }}</p>
                 </form>
             </div>
             <div class="mt-3 mb-3 border-b-2 border-[#0E2167]"/>
