@@ -66,7 +66,6 @@ const client = useSupabaseClient();
 const user = useSupabaseUser();
 
 async function LoginEmail() {
-
       loading.value = true
       error.value = null
       
@@ -77,15 +76,8 @@ async function LoginEmail() {
   
       if (error) throw error;
   
-    // Redirect to Confirm Page to check user info
-    //  navigateTo('/');
-    } catch (err) {
       console.log(err.message)
-      error.value = err.message
-    } finally {
-      loading.value = false
-    }
-  };
+   };
 
 watchEffect(() => {
     if (user.value) {
