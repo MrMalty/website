@@ -56,15 +56,26 @@
 const client = useSupabaseClient();
 const user = useSupabaseUser();
 
-async function signUpNewUser() {
-  const { data, error } = await supabase.auth.signUp({
-    email: email.value,
-    password: password.value,
-    options: {
-      emailRedirectTo: '/',
-    },
-  })
-}
+const handleLogin = async () => {
+    try {
+      loading.value = true
+      error.value = null
+      
+      const { data, error: loginError } = await supabase.auth.signInWithPassword({
+        email: email.value,
+        password: password.value
+      });
+  
+      if (loginError) throw loginError
+  
+      // Redirect to Confirm Page to check user info
+      navigateTo('/');
+    } catch (err) {
+      error.value = err.message
+    } finally {
+      loading.value = false
+    }
+  };
 
 watchEffect(() => {
     if (user.value) {
