@@ -62,22 +62,30 @@
     </div>
 </template>
 <script setup>
-const client = useSupabaseAuthClient();
+const client = useSupabaseClient();
 const user = useSupabaseUser();
 
-async function LoginEmail() {
+const LoginEmail = async () => {
+    try {
       loading.value = true
-      error.value = null
+      errorMsg.value = null
       
       const { data, error } = await client.auth.signInWithPassword({
         email: email.value,
         password: password.value
       });
   
- //     if (error) throw error;
+      if (error) throw error;
   
+    // Redirect to Confirm Page to check user info
+    //  navigateTo('/');
+    } catch (err) {
       console.log(err.message)
-   };
+      error.value = err.message
+    } finally {
+      loading.value = false
+    }
+  };
 
 watchEffect(() => {
     if (user.value) {
