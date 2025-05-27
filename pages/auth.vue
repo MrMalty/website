@@ -19,7 +19,7 @@
                     gap-3
                     p-1.5
                     w-full 
-                    border 
+                    border-2
                     border-[#0E2167]
                     hover:bg-gray-100
                     rounded-full
