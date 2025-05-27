@@ -42,7 +42,7 @@
                     <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Passowrd" type="password" v-model="password" required/>
                 </div>
                 <button
-                @click="LoginEmail"
+                @click="signIn"
                 :disabled="loading"
                 type="submit"
                 class="flex items-center justify-center bg-[#FFFFFF] w-full border-2 hover:bg-gray-100 border-[#0E2167] text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2"
@@ -65,27 +65,25 @@
 const client = useSupabaseClient();
 const user = useSupabaseUser();
 
-async function LoginEmail() {
-    try {
-      loading.value = true
-      errorMsg.value = null
-      
-      const { data, error } = await client.auth.signInWithPassword({
-        email: email.value,
-        password: password.value
-      });
-  
-      if (error) throw error;
-  
-    // Redirect to Confirm Page to check user info
-    //  navigateTo('/');
-    } catch (err) {
-      console.log(err.message)
-      errorMsg.value = err.message
-    } finally {
-      loading.value = false
+const email = ref("");
+const password = ref(null);
+const errorMsg = ref(null);
+
+async function signIn() {
+  try {
+    const { error } = await client.auth.signInWithPassword({
+      email: email.value,
+      password: password.value,
+    });
+    if (error) {
+      errorMsg.value = error.message;
+    } else {
+      return navigateTo('/')
     }
-  };
+  } catch (error) {
+    errorMsg.value = error.message;
+  }
+}
 
 watchEffect(() => {
     if (user.value) {
