@@ -74,7 +74,7 @@ async function LoginEmail() {
         password: password.value
       });
   
-      if (error) throw error;
+ //     if (error) throw error;
   
       console.log(err.message)
    };
