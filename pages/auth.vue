@@ -49,9 +49,9 @@
                 :class="loading ? 'opacity-70' : 'opacity-100'"
               >
                 <Icon v-if="loading" name="eos-icons:bubble-loading" />
-                <div v-else>Place order</div>
+                <div v-else>Log In</div>
               </button>
-                <p v-if="error">Log In</p>
+                <p v-if="error">{{ error }}</p>
                 </form>
             </div>
             <div class="mt-3 mb-3 border-b-2 border-[#0E2167]"/>
