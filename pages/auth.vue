@@ -65,7 +65,7 @@
 const client = useSupabaseClient();
 const user = useSupabaseUser();
 
-const LoginEmail = async () => {
+async function LoginEmail() {
     try {
       loading.value = true
       errorMsg.value = null
@@ -81,7 +81,7 @@ const LoginEmail = async () => {
     //  navigateTo('/');
     } catch (err) {
       console.log(err.message)
-      error.value = err.message
+      errorMsg.value = err.message
     } finally {
       loading.value = false
     }
