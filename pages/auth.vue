@@ -45,7 +45,7 @@
                 </form>
             </div>
             <div class="mt-3 mb-3 border-b-2 "/>
-            <div class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-2">
+            <div class="flex items-center justify-center bg-[#23AAEF] w-full text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2">
                 <icon name="mdi:account" /><NuxtLink to="/signup">Sign Up</NuxtLink>
             </div>
         </div>
