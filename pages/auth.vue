@@ -36,13 +36,13 @@
             <div>
                 <form >
                 <div class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2">
-                    <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Email" type="email"  v-model="credentials.email" required/>
+                    <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Email" type="email"  v-model="email" required/>
                 </div>
                 <div class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2">
-                    <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Passowrd" type="password" v-model="credentials.password" required/>
+                    <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Passowrd" type="password" v-model="password" required/>
                 </div>
                 <button
-                @click="loginemail"
+                @click="LoginEmail"
                 :disabled="loading"
                 type="submit"
                 class="flex items-center justify-center bg-[#FFFFFF] w-full border-2 hover:bg-gray-100 border-[#0E2167] text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2"
@@ -65,12 +65,27 @@
 const client = useSupabaseClient();
 const user = useSupabaseUser();
 
-async function loginemail() {
-  const { email, password } = credentials;
-  const { error } = await client.auth.signInWithPassword({ email, password });
-  if (!error) return router.push('/');
-  console.log(error);
-}
+const LoginEmail = async () => {
+    try {
+      loading.value = true
+      error.value = null
+      
+      const { data, error } = await client.auth.signInWithPassword({
+        email: email.value,
+        password: password.value
+      });
+  
+      if (error) throw error;
+  
+      // Redirect to Confirm Page to check user info
+      navigateTo('/');
+    } catch (err) {
+        console.log(err.message)
+      error.value = err.message
+    } finally {
+      loading.value = false
+    }
+  };
 
 watchEffect(() => {
     if (user.value) {
