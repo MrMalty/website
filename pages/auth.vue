@@ -35,11 +35,11 @@
 <!-- Email Loging Section -->
             <div>
                 <form @click="handleLogin">
-                <div class="flex items-center border-2 border-[#0E2167] rounded-md w-full">
+                <div class="flex items-center border-2 border-grey-500 hover:bg-gray-100 rounded-md w-full">
                     <input class="w-full" placeholder="Email" type="email"  v-model="email" required/>
                 </div>
-                <div class="flex items-center border-2 border-[#0E2167] rounded-md w-full">
-                    <input class="w-full mt-2" placeholder="Passowrd" type="password" v-model="password" required/>
+                <div class="flex items-center border-2 border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2">
+                    <input class="w-full" placeholder="Passowrd" type="password" v-model="password" required/>
                 </div>
                 <button class="flex items-center justify-center bg-[#FFFFFF] w-full border-2 hover:bg-gray-100 border-[#0E2167] text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2" type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
                 <p v-if="error">{{ error }}</p>
