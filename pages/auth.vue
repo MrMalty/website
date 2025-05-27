@@ -65,7 +65,7 @@
 const client = useSupabaseClient();
 const user = useSupabaseUser();
 
-const handleLogin = async () => {
+const LoginEmail = async () => {
     try {
       loading.value = true
       error.value = null
@@ -80,6 +80,7 @@ const handleLogin = async () => {
       // Redirect to Confirm Page to check user info
       navigateTo('/');
     } catch (err) {
+        console.log(err.message)
       error.value = err.message
     } finally {
       loading.value = false
