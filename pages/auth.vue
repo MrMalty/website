@@ -46,7 +46,7 @@
             </div>
             <div class="mt-3 mb-3 border-b-2 "/>
             <div class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-2">
-                <icon name="mdi:account" /><NuxtLink to="/register">Click Here.</NuxtLink>
+                <icon name="mdi:account" /><NuxtLink to="/signup">Click Here.</NuxtLink>
             </div>
         </div>
     </div>
