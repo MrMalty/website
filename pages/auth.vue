@@ -48,7 +48,7 @@
                 class="flex items-center justify-center bg-[#FFFFFF] w-full border-2 hover:bg-gray-100 border-[#0E2167] text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2"
                 :class="loading ? 'opacity-70' : 'opacity-100'"
               >
-                <Icon v-if="loading" name="eos-icons:loading" />
+                <Icon v-if="loading" name="eos-icons:bubble-loading" />
                 <div v-else>Place order</div>
               </button>
                 <p v-if="error">Log In</p>
