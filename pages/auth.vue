@@ -41,7 +41,7 @@
                 <div class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2">
                     <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Passowrd" type="password" v-model="password" required/>
                 </div>
-                <button @click="handleLogin" class="flex items-center justify-center bg-[#FFFFFF] w-full border-2 hover:bg-gray-100 border-[#0E2167] text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2" type="submit" :disabled="loading"> {{ loading ? 'Logging in...' : 'Login' }}</button>
+                <button @click="handleLogin" class="flex items-center justify-center bg-[#FFFFFF] w-full border-2 hover:bg-gray-100 border-[#0E2167] text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2" type="submit" :disabled="loading"> {{ loading ? '<Icon v-if="isSearching" name="eos-icons:loading" size="25" class="mr-2" />' : 'Login' }}</button>
                 <p v-if="error">{{ error }}</p>
                 </form>
             </div>
