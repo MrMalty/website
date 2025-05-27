@@ -65,8 +65,8 @@
 const client = useSupabaseClient();
 const user = useSupabaseUser();
 
-async funstion LoginEmail() {
-    try {
+async function LoginEmail() {
+
       loading.value = true
       error.value = null
       
