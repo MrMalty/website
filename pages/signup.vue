@@ -60,34 +60,16 @@
   const supabase = useSupabaseClient()
   const user = useSupabaseUser()
 
-
-  const handleSignUp = async () => {
-    try {
-      loading.value = true
-      error.value = null
-      
-      const { error } = await supabase.auth.signUp({
-    email,
-    password,
-    options: {
-      data: {
-        first_name: firstName,
-        last_name: lastName,
-      },
-      emailRedirectTo: `${requestUrl.origin}/auth/callback`,
-    },
-  });
-
-//      const { data, error: signUpError } = await supabase.auth.signUp({
-//        email: email.value,
-//        password: password.value,
-//        options: {
-//          data: {
-//            first_name: fname,
-//            last_name: lname,
-//          },
-//        },
-//      })
+      const { data, error: signUpError } = await supabase.auth.signUp({
+        email: email.value,
+        password: password.value,
+        options: {
+          data: {
+            first_name: fname,
+            last_name: lname,
+          },
+        },
+      })
   
       if (signUpError) throw signUpError
   
