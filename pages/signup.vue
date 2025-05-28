@@ -69,7 +69,6 @@
       const { data, error: signUpError } = await supabase.auth.signUp({
         email: email.value,
         password: password.value,
-        },
       })
   
       if (signUpError) throw signUpError
