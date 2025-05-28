@@ -14,31 +14,27 @@
       
             <form @submit.prevent="handleSignUp">
             <div
-              class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
+              class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2"
             >
-              <label>First Name</label>
-              <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="text" v-model="fname" required/>
+              <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="First Name" type="text" v-model="fname" required/>
             </div>
 
             <div
-              class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
+              class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2"
             >
-              <label>Last Name</label>
-              <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="text" v-model="lname" required/>
+              <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Last Name" type="text" v-model="lname" required/>
             </div>
 
             <div
-              class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
+              class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2"
             >
-              <label>Email</label>
-              <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="email" v-model="email" required/>
+              <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Email Address" type="email" v-model="email" required/>
             </div>
   
             <div
-              class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
+              class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2"
             >
-             <label>Password</label>
-              <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="password" v-model="password" required/>
+              <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Password" type="password" v-model="password" required/>
             </div>
   
             <button class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-4" type="submit" :disabled="loading"> {{ loading ? 'Creating Account...' : 'Sign Up' }}</button>
