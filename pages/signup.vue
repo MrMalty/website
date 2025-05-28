@@ -69,11 +69,6 @@
       const { data, error: signUpError } = await supabase.auth.signUp({
         email: email.value,
         password: password.value,
-        options: {
-          data: {
-            first_name: fname,
-            last_name: lname,
-          },
         },
       })
   
