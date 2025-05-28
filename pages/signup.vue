@@ -16,6 +16,20 @@
             <div
               class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
             >
+              <label>First Name</label>
+              <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="text" v-model="fname" required/>
+            </div>
+
+            <div
+              class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
+            >
+              <label>Last Name</label>
+              <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="text" v-model="lname" required/>
+            </div>
+
+            <div
+              class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
+            >
               <label>Email</label>
               <input class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none" type="email" v-model="email" required/>
             </div>
@@ -42,6 +56,8 @@
   <script setup>
   const email = ref('')
   const password = ref('')
+  const fname = ref('')
+  const lname = ref('')
   const error = ref(null)
   const loading = ref(false)
   
@@ -54,10 +70,28 @@
       loading.value = true
       error.value = null
       
-      const { data, error: signUpError } = await supabase.auth.signUp({
-        email: email.value,
-        password: password.value
-      })
+      const { error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      data: {
+        first_name: firstName,
+        last_name: lastName,
+      },
+      emailRedirectTo: `${requestUrl.origin}/auth/callback`,
+    },
+  });
+
+//      const { data, error: signUpError } = await supabase.auth.signUp({
+//        email: email.value,
+//        password: password.value,
+//        options: {
+//          data: {
+//            first_name: fname,
+//            last_name: lname,
+//          },
+//        },
+//      })
   
       if (signUpError) throw signUpError
   
