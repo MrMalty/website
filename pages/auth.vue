@@ -5,7 +5,9 @@
                 <img width="170" src="/kc_logo.png">
             </NuxtLink>
         </div>
-
+        <div v-if="error">
+            {{ error }}
+        </div>
         <div class="max-w-[400px] mx-auto px-2">
             <div class="text-center my-6">Provider Login</div>
 
@@ -70,7 +72,7 @@ const password = ref(null);
 const errorMsg = ref(null);
 
 async function signIn() {
-    const { error } = await client.auth.signInWithPassword({
+    const { data, error } = await client.auth.signInWithPassword({
       email: email.value,
       password: password.value,
     });
