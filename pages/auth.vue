@@ -76,6 +76,8 @@ async function signIn() {
       email: email.value,
       password: password.value,
     });
+
+    if (error) throw error;
 };
 
 watchEffect(() => {
