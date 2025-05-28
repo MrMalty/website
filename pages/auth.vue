@@ -73,11 +73,10 @@ const errorMsg = ref(null);
 
 async function signIn() {
     const { data, error } = await client.auth.signInWithPassword({
-      email: email.value,
-      password: password.value,
+      email: 'maltys@live.com.au',
+      password: '123456789',
+      redirectTo: window.location.origin
     });
-
-    if (error) throw error;
 };
 
 watchEffect(() => {
