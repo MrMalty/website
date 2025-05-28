@@ -70,20 +70,11 @@ const password = ref(null);
 const errorMsg = ref(null);
 
 async function signIn() {
-  try {
     const { error } = await client.auth.signInWithPassword({
       email: email.value,
       password: password.value,
-    }, 500);
-    if (error) {
-      errorMsg.value = error.message;
-    } else {
-      return navigateTo('/')
-    }
-  } catch (error) {
-    errorMsg.value = error.message;
-  }
-}
+    });
+};
 
 watchEffect(() => {
     if (user.value) {
