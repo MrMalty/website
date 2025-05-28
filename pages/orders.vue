@@ -6,6 +6,7 @@
                     <Icon name="carbon:delivery" color="#5FCB04" size="35"/>
                     <span class="pl-4">Orders</span>
                 </div>
+                <div>{{ user.value.id }}</div>
                 <div 
                     v-if="orders && orders.data" 
                     v-for="order in orders.data" 
