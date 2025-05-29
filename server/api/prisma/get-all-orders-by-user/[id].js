@@ -14,7 +14,6 @@ export default defineEventHandler(async (event) => {
             
         }
     })
-    console.log(event.context.params.userId);
-    
+
     return orders
 })
