@@ -75,9 +75,8 @@ async function signIn() {
     const { data, error } = await client.auth.signInWithPassword({
       email: email.value,
       password: password.value,
- //     redirectTo: window.location.origin
+      redirectTo: window.location.origin
     });
-console.log(email.value, password.value);
 };
 
 watchEffect(() => {
