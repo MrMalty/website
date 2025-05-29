@@ -7,6 +7,7 @@
                     <span class="pl-4">Orders</span>
                 </div>
                 <div>{{ user.id }}</div>
+                <div>{{ test }}</div>div>
                 <div 
                     v-if="orders && orders.data" 
                     v-for="order in orders.data" 
@@ -48,7 +49,7 @@ const userStore = useUserStore()
 const user = useSupabaseUser()
 
 let orders = ref(null)
-
+console.log(test);
 onBeforeMount(async () => {
     orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`)
 })

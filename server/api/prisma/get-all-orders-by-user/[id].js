@@ -16,5 +16,5 @@ console.log(test)
             
         }
     })
-    return orders
+    return orders, test
 })
