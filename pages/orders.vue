@@ -14,11 +14,11 @@
                     class="text-sm pl-[50px]"
                 >
                     <div class="border-b py-1">
-                        <p>Stripe ID: {{ order.stripeId }}</p>
+                        <p>Stripe ID: {{ orders.stripeId }}</p>
 
                         <div class="pt-2"></div>
 
-                        <div v-for="item in order.orderItem">
+                        <div v-for="item in orders.orderItem">
                             <NuxtLink 
                                 class="flex items-center gap-3 p-1 hover:underline hover:text-blue-500" 
                                 :to="`/item/${item.productId}`"
