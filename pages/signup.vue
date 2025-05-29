@@ -46,8 +46,7 @@
   <script setup>
   const email = ref('')
   const password = ref('')
-  const fname = ref('')
-  const lname = ref('')
+  const fullname = ref('')
   const error = ref(null)
   const loading = ref(false)
   
