@@ -76,9 +76,8 @@ async function signIn() {
       email: email.value,
       password: password.value,
  //     redirectTo: window.location.origin
-
- console.log(email.value, password.value);
     });
+console.log(email.value, password.value);
 };
 
 watchEffect(() => {
