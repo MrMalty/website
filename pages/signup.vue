@@ -16,13 +16,7 @@
             <div
               class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2"
             >
-              <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="First Name" type="text" v-model="fname" required/>
-            </div>
-
-            <div
-              class="flex items-center border border-[#0E2167] border-grey-500 hover:bg-gray-100 rounded-md w-full mt-2"
-            >
-              <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Last Name" type="text" v-model="lname" required/>
+              <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]" placeholder="Full Name" type="text" v-model="fullname" required/>
             </div>
 
             <div
@@ -69,6 +63,11 @@
       const { data, error: signUpError } = await supabase.auth.signUp({
         email: email.value,
         password: password.value,
+        options: {
+          data: {
+            display_name: fullname.value
+          }
+        }
       })
   
       if (signUpError) throw signUpError
