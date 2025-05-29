@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
       }
     })
 
-    return orders
+    return {orders, userId }
   } catch (error) {
     console.error('Error fetching orders:', error)
     return {
