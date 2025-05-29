@@ -12,6 +12,7 @@
                         placeholder="Contact Name"
                         v-model:input="contactName"
                         inputType="text"
+                        value="{{ user.display_name }}"
                         :error="error && error.type == 'contactName' ? error.message : ''"
                     />
 
