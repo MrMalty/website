@@ -67,8 +67,8 @@
 const client = useSupabaseClient();
 const user = useSupabaseUser();
 
-const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
+const email = ref("");
+const password = ref("");
 const errorMsg = ref(null);
 
 async function signIn() {
