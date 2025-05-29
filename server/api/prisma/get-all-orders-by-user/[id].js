@@ -16,5 +16,5 @@ console.log(test)
             
         }
     })
-    return orders, test
+    return orders, test, event.context.params.userId
 })
