@@ -79,6 +79,7 @@ async function signIn() {
     });
 };
 
+
 watchEffect(() => {
     if (user.value) {
         return navigateTo('/')
