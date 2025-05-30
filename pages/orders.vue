@@ -47,11 +47,12 @@ import MainLayout from '~/layouts/MainLayout.vue';
 import { useUserStore } from '~/stores/user';
 const userStore = useUserStore()
 const user = useSupabaseUser()
+const userId = user.id
 
 let orders = ref(null)
 
 onBeforeMount(async () => {
-    orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`)
+    orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${userId}`)
 })
 
 onMounted(() => {
