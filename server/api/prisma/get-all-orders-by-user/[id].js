@@ -3,7 +3,7 @@ const prisma = new PrismaClient()
 
 export default defineEventHandler(async(event) => {
   try {
-    const userid = event.context.params>.id
+    const userid = event.context.params?.id
     return { Message: `users ID is ${userid}` }
 
     // if (!userId) {
