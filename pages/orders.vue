@@ -51,7 +51,7 @@ const user = useSupabaseUser()
 let orders = ref(null)
 
 
-onMounted(async () => {
+onBeforeMount(async () => {
   if (user.id) {
     const { data } = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`)
     orders.value = data.value
