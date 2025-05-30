@@ -48,7 +48,7 @@ import MainLayout from '~/layouts/MainLayout.vue';
 import { useUserStore } from '~/stores/user';
 const userStore = useUserStore()
 const user = useSupabaseUser()
-const userId = user.id
+
 
 let orders = ref(null)
 
