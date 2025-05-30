@@ -52,10 +52,16 @@ const user = useSupabaseUser()
 
 let orders = ref(null)
 
-onBeforeMount(async () => {
-    const userId = string(user.id)
-    orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${userId}`)
+
+onMounted(async () => {
+  if (user.id) {
+    const { data } = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`)
+    orders.value = data.value
+  } else {
+    console.warn('User ID is not available yet')
+  }
 })
+
 
 onMounted(() => {
     if (!user.value) {
