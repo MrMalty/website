@@ -69,7 +69,7 @@
               </li>
               <li
                 v-if="user"
-                @click="client.auth.signOut()"
+                @click="signOut()"
                 class="text-[13px] py-2 px-4 w-full hover:bg-gray-200"
               >
                 Sign Out
@@ -191,6 +191,12 @@ const searchByName = useDebounce(async () => {
   );
   isSearching.value = false;
 }, 100);
+
+const signOut = () => {
+  client.auth.signOut();
+  return navigateTo("/");
+};
+
 
 watch(
   () => searchItem.value,
