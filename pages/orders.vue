@@ -6,7 +6,7 @@
                     <Icon name="carbon:delivery" color="#5FCB04" size="35"/>
                     <span class="pl-4">Orders</span>
                 </div>
-                <div>{{ user.id }}</div>
+                <div>{{ user.value.id }}</div>
                 <div 
                     v-if="orders && orders.data" 
                     v-for="order in orders.data" 
@@ -51,7 +51,7 @@ const user = useSupabaseUser()
 let orders = ref(null)
 
 
-onBeforeMount(async () => {
+onMounted(async () => {
     orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`)
 })
 
