@@ -1,9 +1,10 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler((event) => {
   try {
     const userId = event.context.params.id
+    return { UersId: 'users ID is ${userId}' }
 
     if (!userId) {
       return {
