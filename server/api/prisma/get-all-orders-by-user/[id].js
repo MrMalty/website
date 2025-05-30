@@ -1,37 +1,40 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
-export default defineEventHandler(async(event) => {
-  try {
-    const userid = event.context.params
+export default defineEventHandler(async (event) => {
 
-    return { Message: `users ID is ${userid}` }
+const userid = event.context.params
+return { Message: `users ID is ${userid}` }
+  // try {
+  //   const userid = event.context.params
 
-    // if (!userId) {
-    //   return {
-    //     statusCode: 400,
-    //     body: { error: 'Missing userId parameter' }
-    //   }
-    // }
+  //   return { Message: `users ID is ${userid}` }
 
-    // const orders = await prisma.orders.findMany({
-    //   where: { userId },
-    //   orderBy: { id: 'desc' },
-    //   include: {
-    //     orderItem: {
-    //       include: {
-    //         product: true
-    //       }
-    //     }
-    //   }
-    // })
+  //   // if (!userId) {
+  //   //   return {
+  //   //     statusCode: 400,
+  //   //     body: { error: 'Missing userId parameter' }
+  //   //   }
+  //   // }
 
-    // return {orders, userId }
-  } catch (error) {
-    console.error('Error fetching orders:', error)
-    return {
-      statusCode: 500,
-      body: { error: 'Internal Server Error' }
-    }
-  }
+  //   // let orders = await prisma.orders.findMany({
+  //   //   where: { userId },
+  //   //   orderBy: { id: 'desc' },
+  //   //   include: {
+  //   //     orderItem: {
+  //   //       include: {
+  //   //         product: true
+  //   //       }
+  //   //     }
+  //   //   }
+  //   // })
+
+  //   // return {orders, userId }
+  // } catch (error) {
+  //   console.error('Error fetching orders:', error)
+  //   return {
+  //     statusCode: 500,
+  //     body: { error: 'Internal Server Error' }
+  //   }
+  // }
 })
