@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
-export default defineEventHandler((event) => {
+export default defineEventHandler(async(event) => {
   try {
     const userId = event.context.params.id
     return { UersId: 'users ID is ${userId}' }
