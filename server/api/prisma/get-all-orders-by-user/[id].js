@@ -8,7 +8,6 @@ export default defineEventHandler(async (event) => {
   try {
     const userid = event.context.params
 
-    return { Message: `users ID is ${userid}` }
 
     if (!userId) {
       return {
