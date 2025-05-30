@@ -7,7 +7,7 @@
                     <span class="pl-4">Orders</span>
                 </div>
                 <div>{{ user.id }}</div>
-                <div>- {{ orders }} - {{ userId }}</div>
+                <div>- {{ orders }}</div>
                 <div>{{ UsersId }}</div>
                 <div 
                     v-if="orders && orders.data" 
@@ -53,7 +53,7 @@ const userId = user.id
 let orders = ref(null)
 
 onBeforeMount(async () => {
-    orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${userId}`)
+    orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`)
 })
 
 onMounted(() => {
