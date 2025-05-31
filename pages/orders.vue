@@ -51,12 +51,12 @@ const userId = user.id
 let orders = ref(null)
 
 onMounted(async () => {
-    if (!userId) {
+    if (!user.value) {
         console.error("User ID is missing");
         return;
     }
     try {
-        const response = await useFetch(`/api/prisma/get-all-orders-by-user/${userId}`);
+        const response = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
         orders.value = response.data || [];
     } catch (error) {
         console.error("Failed to fetch orders:", error);
