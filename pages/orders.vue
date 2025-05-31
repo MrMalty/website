@@ -53,7 +53,7 @@ const user = useSupabaseUser()
 let orders = ref(null)
 
 onBeforeMount(async () => {
-    if (!user.value.id) {
+    if (!user.value) {
         console.error("User ID is missing");
         return;
     }
