@@ -59,7 +59,7 @@ onBeforeMount(async () => {
     } catch (error) {
         console.error("Failed to fetch orders:", error)
         orders.value = []
-        return error;
+        return {error, response};
     }
 })
 
