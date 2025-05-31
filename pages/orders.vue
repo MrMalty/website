@@ -52,21 +52,12 @@ const user = useSupabaseUser()
 
 let orders = ref(null)
 
-onMounted(async () => {
-    if (!user.value) {
-        console.error("User ID is missing");
-        return;
-    }
-    try {
-        const response = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`);
-        orders.value = response.data || [];
-    } catch (error) {
-        console.error("Failed to fetch orders:", error);
-        orders.value = [];
-        return error;
-    }
-})
-
+onBeforeMount(async () => {
+  if (user.value) {
+    orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
+    setTimeout(() => (userStore.isLoading = false), 200);
+  }
+});
 
 
 onMounted(() => {
