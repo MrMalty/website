@@ -8,6 +8,7 @@
                 </div>
                 <div>{{ user.id }}</div>
                 <div v-if="error">{{ error }}</div>
+                <div v-if="response">{{ response }}</div>
                 <div 
                     v-if="orders && orders.data" 
                     v-for="order in orders.data" 
