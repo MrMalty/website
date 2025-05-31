@@ -54,13 +54,17 @@ let orders = ref(null)
 
 
 onBeforeMount(async () => {
+    if (!user?.id) {
+        console.error("User ID is missing");
+        return;
+    }
     try {
-        const response = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`)
-        orders.value = response.data || []
+        const response = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`);
+        orders.value = response.data || [];
     } catch (error) {
-        console.error("Failed to fetch orders:", error)
-        orders.value = []
-        return {error, response};
+        console.error("Failed to fetch orders:", error);
+        orders.value = [];
+        return error;
     }
 })
 
