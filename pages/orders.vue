@@ -8,7 +8,7 @@
                 </div>
                 <div>{{ user.id }}</div>
                 <div v-if="error">{{ error }}</div>
-                <div v-if="response">{{ response }}</div>
+                <div v-if="orders">{{ orders }}</div>
                 <div 
                     v-if="orders && orders.data" 
                     v-for="order in orders.data" 
@@ -57,7 +57,6 @@ onBeforeMount(async () => {
     try {
         const response = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`)
         orders.value = response.data || []
-        return response;
     } catch (error) {
         console.error("Failed to fetch orders:", error)
         orders.value = []
