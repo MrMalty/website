@@ -54,7 +54,7 @@ let orders = ref(null)
 
 
 onBeforeMount(async () => {
-    if (!user?.id) {
+    if (!user.id) {
         console.error("User ID is missing");
         return;
     }
