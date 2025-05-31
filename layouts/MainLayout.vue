@@ -192,10 +192,22 @@ const searchByName = useDebounce(async () => {
   isSearching.value = false;
 }, 100);
 
-const signOut = () => {
-  client.auth.signOut();
-  return navigateTo("/");
-};
+
+async function singOut() {
+    const { error } = await client.auth.signOut();
+
+    if (error) {
+        console.error("Logout Error:", error);
+        return;
+    }
+
+    // Redirect after sign-out
+    window.location.href = "/"; // Redirect to login page
+}
+// const signOut = () => {
+//   client.auth.signOut();
+//   return navigateTo("/");
+// };
 
 
 watch(
