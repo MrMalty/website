@@ -7,8 +7,6 @@
                     <span class="pl-4">Orders</span>
                 </div>
                 <div>{{ user.id }}</div>
-                <div v-if="error">{{ error }}</div>
-                <div v-if="orders">{{ orders }}</div>
                 <div 
                     v-if="orders && orders.data" 
                     v-for="order in orders.data" 
