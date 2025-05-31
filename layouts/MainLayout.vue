@@ -198,7 +198,7 @@ async function signOut() {
 
     if (error) {
         console.error("Logout Error:", error);
-        return;
+        return error;
     }
 
     // Redirect after sign-out
