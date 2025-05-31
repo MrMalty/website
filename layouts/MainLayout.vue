@@ -193,7 +193,7 @@ const searchByName = useDebounce(async () => {
 }, 100);
 
 
-async function singOut() {
+async function signOut() {
     const { error } = await client.auth.signOut();
 
     if (error) {
