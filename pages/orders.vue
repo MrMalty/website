@@ -53,7 +53,7 @@ let orders = ref(null)
 
 onBeforeMount(async () => {
     try {
-        const response = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`)
+        const response = await useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`)
         orders.value = response.data || []
     } catch (error) {
         console.error("Failed to fetch orders:", error)
