@@ -7,6 +7,7 @@
                     <span class="pl-4">Orders</span>
                 </div>
                 <div>{{ user.id }}</div>
+                <div v-if="error">{{ error }}</div>
                 <div 
                     v-if="orders && orders.data" 
                     v-for="order in orders.data" 
@@ -58,6 +59,7 @@ onBeforeMount(async () => {
     } catch (error) {
         console.error("Failed to fetch orders:", error)
         orders.value = []
+        return error;
     }
 })
 
