@@ -4,7 +4,7 @@ const prisma = new PrismaClient()
 const userId = event.context.params.userId;
 if (!userId) {
     console.error("User ID is missing or invalid.");
-    return { error: "User ID is required." };
+    // return { error: "User ID is required." };
 }
 
 export default defineEventHandler(async (event) => {
