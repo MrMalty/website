@@ -5,10 +5,7 @@
                 <div class="flex items-center text-xl">
                     <Icon name="carbon:delivery" color="#5FCB04" size="35"/>
                     <span class="pl-4">Orders</span>
-                </div><!--
-                <div>{{ user.id }}</div>
-                <div>{{ user.display_name }}</div>-->
-                <div v-if="user.value.id">{{ user.value.id }}</div>
+                </div>
                 <div 
                     v-if="orders && orders.data" 
                     v-for="order in orders.data" 
