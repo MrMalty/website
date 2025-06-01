@@ -8,15 +8,15 @@
                 </div>
                 <div 
                     v-if="orders && orders.data" 
-                    v-for="order in orders.data" 
+                    <!-- v-for="order in orders.data"  -->
                     class="text-sm pl-[50px]"
                 >
                     <div class="border-b py-1">
-                        <p>Stripe ID: {{ order.stripeId }}</p>
-
+                        <!-- <p>Stripe ID: {{ order.stripeId }}</p> -->
+                        <div>{{ order.data }}
                         <div class="pt-2"></div>
 
-                        <div v-for="item in order.orderItem">
+                        <!-- <div v-for="item in order.orderItem">
                             <NuxtLink 
                                 class="flex items-center gap-3 p-1 hover:underline hover:text-blue-500" 
                                 :to="`/item/${item.productId}`"
@@ -28,7 +28,7 @@
 
                         <div class="pt-2 pb-5">
                             Delivery Address: {{ order.name }}, {{ order.address }}, {{ order.zipcode }}, {{ order.city }}, {{ order.country }}
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
