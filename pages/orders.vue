@@ -13,7 +13,7 @@
                 >
                     <div class="border-b py-1">
                         <!-- <p>Stripe ID: {{ order.stripeId }}</p> -->
-                        <div>{{ order }}</div>
+                    
                         <div class="pt-2"></div>
 
                         <!-- <div v-for="item in order.orderItem">
@@ -56,6 +56,7 @@ onMounted(() => {
     // setTimeout(() => (userStore.isLoading = false), 200);
   }
   console.log("Orders:", orders.value.data);
+  console.log("USer ID:", userId)
 });
 
 
