@@ -12,7 +12,7 @@
                     class="text-sm pl-[50px]"
                 >
                     <div class="border-b py-1">
-                    <!--    <p>Stripe ID: {{ order.stripeId }}</p> -->
+                        <p>Stripe ID: {{ order.stripeId }}</p>
 
                         <div class="pt-2"></div>
 
