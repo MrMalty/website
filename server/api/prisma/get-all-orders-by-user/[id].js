@@ -2,8 +2,8 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 if (!userId) {
-    console.log(error: "User ID is missing or invalid.");
-}
+    console.log("error: User ID is missing or invalid.");
+};
 
 
 export default defineEventHandler(async (event) => {
