@@ -43,18 +43,19 @@
 <script setup>
 import MainLayout from '~/layouts/MainLayout.vue';
 import { useUserStore } from '~/stores/user';
-const userStore = useUserStore()
-const user = useSupabaseUser()
+const userStore = useUserStore();
+const user = useSupabaseUser();
 
 
-let orders = ref(null)
+let orders = ref(null);
+const userId = user.id;
 
 onMounted(() => {  
-  if (user.value) {
-    console.log("User ID:", user.value);
-    orders.value = useFetch(`/api/prisma/get-all-orders-by-user/[{user.id}].js`);
+  if (userId) {
+    console.log("User ID:", userId);
+    orders.value = useFetch(`/api/prisma/get-all-orders-by-user/[{userId}].js`);
     // setTimeout(() => (userStore.isLoading = false), 200);
-  }
+  };
   console.log("Orders:", orders.value.data);
   console.log("USer ID:", userId);
 });
