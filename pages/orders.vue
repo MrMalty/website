@@ -53,7 +53,7 @@ const user = useSupabaseUser()
 let orders = ref(null)
 
 onMounted(() => {
-    console.log("User ID:", user.value?.id);
+    console.log("User ID:", user.value);
 
 //   if (user.value) {
 //     orders.value = useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
