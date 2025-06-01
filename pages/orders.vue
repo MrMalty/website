@@ -52,17 +52,17 @@ const user = useSupabaseUser()
 
 let orders = ref(null)
 
-// onBeforeMount(async () => {
-//   if (user.value) {
-//     orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
-//     setTimeout(() => (userStore.isLoading = false), 200);
-//   }
-// });
-watchEffect(async () => {
-  if (user.value?.id) {
+onMounted(() => {
+  if (user.value) {
     orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
+    setTimeout(() => (userStore.isLoading = false), 200);
   }
 });
+// watchEffect(async () => {
+//   if (user.value?.id) {
+//     orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
+//   }
+// });
 
 
 
