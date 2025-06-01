@@ -1,6 +1,11 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
+if (!userId) {
+    return { error: "User ID is missing or invalid." };
+}
+
+
 export default defineEventHandler(async (event) => {
     try {
         let orders = await prisma.orders.findMany({
