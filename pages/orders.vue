@@ -52,12 +52,12 @@ const user = useSupabaseUser()
 
 let orders = ref(null)
 
-onBeforeMount(async () => {
-  if (user.value) {
+watchEffect(async () => {
+  if (user.value?.id) {
     orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
-    setTimeout(() => (userStore.isLoading = false), 200);
   }
 });
+
 
 
 onMounted(() => {
