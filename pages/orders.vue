@@ -55,7 +55,7 @@ onMounted(() => {
     orders.value = useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
     setTimeout(() => (userStore.isLoading = false), 200);
   }
-  console.log("Stripe ID:", orders.stripeId)
+  console.log("Orders:", orders.value)
 });
 
 
