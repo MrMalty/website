@@ -1,14 +1,9 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
-if (!userId) {
-    console.log("User ID: ",userId);
-};
-
-
-export default defineEventHandler(async (event) => {
+export default defineEventHandler( (event) => {
     try {
-        let orders = await prisma.orders.findMany({
+        let orders = prisma.orders.findMany({
             where: { userId: event.context.params.userId },
             orderBy: { id: "desc" },
             include: { 
