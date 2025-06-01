@@ -1,8 +1,8 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
-if (userId) {
-    console.log(userId);
+if (!userId) {
+    console.log("User ID: ",userId);
 };
 
 
