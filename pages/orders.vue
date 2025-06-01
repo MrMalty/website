@@ -56,7 +56,7 @@ onMounted(() => {
     // setTimeout(() => (userStore.isLoading = false), 200);
   }
   console.log("Orders:", orders.value.data);
-  console.log("USer ID:", userId)
+  console.log("USer ID:", userId);
 });
 
 
