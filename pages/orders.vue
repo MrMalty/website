@@ -13,7 +13,7 @@
                 >
                     <div class="border-b py-1">
                         <!-- <p>Stripe ID: {{ order.stripeId }}</p> -->
-                        <div>{{ order.data }}</div>
+                        <div>{{ order }}</div>
                         <div class="pt-2"></div>
 
                         <!-- <div v-for="item in order.orderItem">
