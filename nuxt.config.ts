@@ -3,13 +3,6 @@
 // https://www.youtube.com/watch?v=dVcCRFVhz74
 
 export default defineNuxtConfig({
-  
-
-  head: {
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  }
   pages: true,
   compatibilityDate: '2024-11-01',
   modules: [
