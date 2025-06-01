@@ -54,7 +54,7 @@ let orders = ref(null)
 
 onMounted(() => {
   if (user.value) {
-    orders.value = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
+    orders.value = useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
     setTimeout(() => (userStore.isLoading = false), 200);
   }
 });
