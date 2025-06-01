@@ -52,7 +52,7 @@ let orders = ref(null)
 onMounted(() => {  
   if (user.value) {
     console.log("User ID:", user.value);
-    orders.value = useFetch(`/api/prisma/get-all-orders-by-user/${user.value?.id}`);
+    orders.value = useFetch(`/api/prisma/get-all-orders-by-user/${user.id}`);
     // setTimeout(() => (userStore.isLoading = false), 200);
   }
   console.log("Orders:", orders.data);
