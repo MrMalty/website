@@ -53,8 +53,8 @@ onMounted(() => {
     
   if (user.value) {
     console.log("User ID:", user.value);
-//     orders.value = useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
-//     setTimeout(() => (userStore.isLoading = false), 200);
+    orders.value = useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
+    setTimeout(() => (userStore.isLoading = false), 200);
   }
 });
 
