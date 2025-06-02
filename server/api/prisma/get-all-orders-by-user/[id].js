@@ -1,6 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 const { id } = event.context.params
+return { message: `Fetching data for ID: ${id}` };
 
 
 export default defineEventHandler(async (event) => {
@@ -16,5 +17,5 @@ export default defineEventHandler(async (event) => {
             
         }
     });
-    return { orders, id };
+    return orders;
 });

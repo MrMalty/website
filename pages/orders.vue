@@ -48,7 +48,6 @@ const user = useSupabaseUser()
 
 
 let orders = ref(null)
-let id = ref(null)
 
 onMounted(async () => {  
   if (user.value) {
@@ -63,13 +62,6 @@ onMounted(async () => {
     // setTimeout(() => (userStore.isLoading = false), 200);
   }
 });
-
-watch(
-  () => id.value,
-  async () => {
-    console.log("ID: ", id);
-  }
-);
 
 onMounted(() => {
     if (!user.value) {
