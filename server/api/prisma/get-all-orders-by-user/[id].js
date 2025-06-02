@@ -16,5 +16,5 @@ export default defineEventHandler(async (event) => {
             
         }
     });
-    return (orders, id);
+    return { orders, id };
 });
