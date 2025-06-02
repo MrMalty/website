@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 const { id } = event.context.params
-
+console.log("ID:", id);
 
 export default defineEventHandler(async (event) => {
     let orders = await prisma.orders.findMany({
