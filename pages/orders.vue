@@ -61,6 +61,7 @@ onMounted(async () => {
     }
     // setTimeout(() => (userStore.isLoading = false), 200);
   }
+  console.log("id:", id);
 });
 
 
