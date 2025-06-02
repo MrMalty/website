@@ -61,10 +61,14 @@ onMounted(async () => {
     }
     // setTimeout(() => (userStore.isLoading = false), 200);
   }
-  console.log("id:", id);
 });
 
-
+watch(
+  () => id.value,
+  async () => {
+    console.log("ID: ", id);
+  }
+);
 
 onMounted(() => {
     if (!user.value) {
