@@ -21,11 +21,11 @@
             <div class="text-2xl font-bold mb-2">Shopping Cart ({{ userStore.cart.length }})</div>
           </div>
 
-          <div class="bg-[#FEEEEF] rounded-full p-4 mt-4">
+          <!-- <div class="bg-[#FEEEEF] rounded-full p-4 mt-4">
             <div class="text-red-500 font-bold">
               Welcome Deal applicable on 1 item only
             </div>
-          </div>
+          </div> -->
           <div id="Items" class="bg-[#B7CEE2] rounded-lg p-4 mt-4">
             <div v-for="product in userStore.cart">
               <CartItem
