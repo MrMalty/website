@@ -49,14 +49,14 @@ const user = useSupabaseUser()
 userStore.userId = user.value.id;
 
 let orders = ref(null)
-let userId = ref("")
+let userId = userStore.userId
 
 onMounted(async () => {  
   if (userStore.userId) {
     console.log("User value ID:", user.value.id);
     console.log("userStore.userId :", userStore.userId);
-    let userId = userStore.userId
-    const { data, error } = await useFetch(`/api/prisma/get-all-orders-by-user/${userId}`);
+
+    const { data, error } = await useFetch(`/api/prisma/get-all-orders-by-user/${user,value.id}`);
     orders.value = data.value;
     console.log("Orders:", orders.value);
     if (error.value) {
