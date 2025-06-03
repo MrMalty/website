@@ -6,6 +6,7 @@ export const useUserStore = defineStore('user', {
         isLoading: false,
         cart: [],
         checkout: [],
+        userId: null,
     }),
     persist: true
 })
