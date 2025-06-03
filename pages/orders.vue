@@ -6,7 +6,7 @@
                     <Icon name="carbon:delivery" color="#5FCB04" size="35"/>
                     <span class="pl-4">Orders</span>
                 </div>
-                <div>Your ID:{{ users.id }}</div>
+                <div>Your ID:{{ user.id }}</div>
                 <div 
                     v-if="orders" 
                     v-for="order in orders"
