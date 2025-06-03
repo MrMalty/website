@@ -7,8 +7,8 @@
                     <span class="pl-4">Orders</span>
                 </div>
                 <div 
-                    v-if="orders && orders.data" 
-                    v-for="order in orders.data"
+                    v-if="orders" 
+                    v-for="order in orders"
                     class="text-sm pl-[50px]"
                 >
                     <div class="border-b py-1">
