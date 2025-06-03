@@ -55,8 +55,8 @@ let userId = ref("")
 onMounted(async () => {  
   if (user.value) {
     console.log("User value ID:", user.value.id);
-
-    const { data, error } = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
+    console.log("userStore.userId :", userStore.userId);
+    const { data, error } = await useFetch(`/api/prisma/get-all-orders-by-user/${userStore.UserId}`);
     orders.value = data.value;
     console.log("Orders:", orders.value);
     if (error.value) {
