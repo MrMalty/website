@@ -59,6 +59,7 @@ onMounted(async () => {
     if (error.value) {
         console.error("Fetch error:", error.value);
     }
+    console.log("userId: ", userId)
     // setTimeout(() => (userStore.isLoading = false), 200);
   }
 });
