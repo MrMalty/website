@@ -8,7 +8,7 @@
                 </div>
                 <div 
                     v-if="orders && orders.data" 
-                    <!-- v-for="order in orders.data"  -->
+                    v-for="order in orders.data"
                     class="text-sm pl-[50px]"
                 >
                     <div class="border-b py-1">
@@ -60,7 +60,6 @@ onMounted(async () => {
     if (error.value) {
         console.error("Fetch error:", error.value);
     }
-    console.log("userId: ", userId)
     // setTimeout(() => (userStore.isLoading = false), 200);
   }
 });
