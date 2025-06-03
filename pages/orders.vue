@@ -48,6 +48,7 @@ const user = useSupabaseUser()
 
 
 let orders = ref(null)
+let userId = ref(null)
 
 onMounted(async () => {  
   if (user.value) {
