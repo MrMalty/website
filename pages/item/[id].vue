@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-        <div class="md:w-[60%] bg-[#E8E8E8] p-3 rounded-lg">
+        <div class="md:w-[60%] bg-[#D3FCFE] p-3 rounded-lg">
           <div v-if="product && product.data">
             <p class="mb-2">{{ product.data.title }}</p>
             <p class="mb-2 mt-1">{{ product.data.productcode }}</p>
