@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
-const { userId } = getQuery(event)
+const { userId } = getRouterParams(event, 'userId')
 
 export default defineEventHandler(async (event) => {
     let orders = await prisma.orders.findMany({
