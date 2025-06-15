@@ -4,10 +4,16 @@ const newPassword = ref('')
 
 const updateUserPassword = async () => {
   const { data, error } = await supabase.auth.updateUser({
-    password: newPassword.value, 
-    redirectTo: 'https://kiallacomputer.netlify.app/auth'
+    password: newPassword.value
   })
-  if (error) console.log(error)
+  if (error) {
+    console.log(error)
+    alert(error)
+  }else{
+    alert("Password reset was successful!")
+    navigateTo('/auth')
+
+  }
 }
 </script>
 
@@ -25,7 +31,10 @@ const updateUserPassword = async () => {
                 v-model="newPassword"
                 type="password"
             />
-            <button class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-4" @click="updateUserPassword">
+            <button 
+                class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-4" 
+                @click="updateUserPassword"
+                >
                 Update Password
             </button>
         </div>
