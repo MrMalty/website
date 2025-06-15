@@ -4,7 +4,8 @@ const newPassword = ref('')
 
 const updateUserPassword = async () => {
   const { data, error } = await supabase.auth.updateUser({
-    password: newPassword.value
+    password: newPassword.value, 
+    redirectTo: 'https://kiallacomputer.netlify.app/auth'
   })
   if (error) console.log(error)
 }
