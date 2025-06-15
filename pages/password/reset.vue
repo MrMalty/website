@@ -7,7 +7,10 @@ const requestResetPassword = async () => {
     redirectTo: 'https://kiallacomputer.netlify.app/password/update',
   })
   if (error) console.log(error)
+  alert("If you email address is registed with our database you will receive a link in your email, please check your junk/spam folder.")
+  navigateTo('/auth')
 }
+
 </script>
 
 <template>
