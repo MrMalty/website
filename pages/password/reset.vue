@@ -23,7 +23,7 @@ const requestResetPassword = async () => {
                 v-model="email"
                 type="email"
             />
-            <button @click="requestResetPassword">
+            <button class="flex items-center justify-center bg-[#0E2167] w-full text-[#FFFFFF] text-[21px] font-semibold p-1.5 rounded-full mt-4" @click="requestResetPassword">
                 Request Password Reset
             </button>
         </div>
