@@ -56,11 +56,10 @@
                 <p v-if="errorMsg">{{ errorMsg }}</p>
                 </form>
             </div>
-            <div class="flex items-center justify-center bg-[#FFFFFF] border-2 hover:bg-gray-100 border-[#0E2167] w-1/4 text-[#0E2167] text-[10px] font-semibold p-1.5 rounded-full mt-2">
+            <div class="flex items-center justify-center bg-[#FFFFFF] w-1/2 text-[#0E2167] text-[12px] font-semibold p-1.5 mt-2">
                 <icon name="mdi:lock-reset" /><NuxtLink to="/passowrd/reset">Forgot Password</NuxtLink>
             </div>
-            <div class="mt-3 mb-3 border-b-2 border-[#0E2167]"/>
-            <div class="flex items-center justify-center bg-[#FFFFFF] border-2 hover:bg-gray-100 border-[#0E2167] w-full text-[#0E2167] text-[21px] font-semibold p-1.5 rounded-full mt-2">
+            <div class="flex items-center justify-center bg-[#FFFFFF] w-1/2 text-[#0E2167] text-[12px] font-semibold p-1.5 mt-2">
                 <icon name="mdi:account" /><NuxtLink to="/signup">Sign Up</NuxtLink>
             </div>
         </div>
