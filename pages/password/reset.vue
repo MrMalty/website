@@ -19,7 +19,7 @@ const requestResetPassword = async () => {
         </div>
 
         <div class="max-w-[400px] mx-auto px-2">
-            <input
+            <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]"
                 v-model="email"
                 type="email"
             />
