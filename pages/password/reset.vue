@@ -4,7 +4,7 @@ const email = ref('')
 
 const requestResetPassword = async () => {
   const { data, error } = await supabase.auth.resetPasswordForEmail(email.value, {
-    redirectTo: 'https://kiallacomputer.netlify.com/password/update',
+    redirectTo: 'https://kiallacomputer.netlify.app/password/update',
   })
   if (error) console.log(error)
 }
