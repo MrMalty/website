@@ -18,8 +18,9 @@ const requestResetPassword = async () => {
             </NuxtLink>
         </div>
 
-        <div class="max-w-[400px] mx-auto px-2">
+        <div class="max-w-[400px] mx-auto px-2 mt-10">
             <input class="w-full text-gray-800 border text-sm border-[#EFF0EB] rounded-lg p-3 placeholder-gray-500 focus:outline-none bg-[#FFFFFF]"
+                placeholder="Enter new password"
                 v-model="email"
                 type="email"
             />
