@@ -61,7 +61,7 @@
             </div>
             <div class="border-b" />
             <ul class="bg-white">
-              <li v-if="user">Welcome {{ user.display_name }}</li>
+              <li v-if="user">Welcome {{ user }}</li>
               <li
                 @click="navigateTo('/orders')"
                 class="text-[13px] py-2 px-4 w-full hover:bg-gray-200"
