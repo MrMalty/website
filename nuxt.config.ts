@@ -1,27 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { resolve } from "path";
+
 export default defineNuxtConfig({
-  pages: true,
-
-  modules: [
-    "@nuxt/icon",
-    "nuxt-lodash",
-    "@pinia/nuxt",
-    "@pinia-plugin-persistedstate/nuxt",
-    "@nuxtjs/tailwindcss",
-    //'@nuxtjs/supabase',
-  ],
-
-  runtimeConfig: {
-    public: {
-      stripePk: process.env.STRIPE_PK_KEY,
+  compatibilityDate: "2025-05-15",
+  devtools: { enabled: true },
+  alias: {
+    "@": resolve(__dirname, "/"),
+  },
+  css: ["~/assets/main.css"],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
-
-  app: {
-    head: {
-      script: [{ src: "https://js.stripe.com/v3/", defer: true }],
-    },
-  },
-
-  compatibilityDate: "2025-02-25",
 });
