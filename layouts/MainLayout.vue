@@ -1,65 +1,60 @@
 <template>
   <div id="MainLayout" class="w-full fixed z-50">
-    <div id="topMenu" class="w-full bg-[#FFFFFF] border-b md:block hidden">
+    <div id="TopMenu" class="w-full bg-[#FAFAFA] border-b md:block hidden">
       <ul
-        class="flex items-center justify-end text-xs text-[#0E2167] font-light px-2 h-10 bg-[#FFFFFF] max-w-[1280px]"
+        class="flex items-center justify-end text-xs text-[#333333] font-light px-2 h-10 bg-[#FAFAFA] max-w-[1200px]"
       >
         <li
-          class="border-r border-r-gray-400 px-3 hover:text-[#23AAEF] cursor-pointer"
-        >
-          Sell on Kialla Computers
-        </li>
-        <li
-          class="border-r border-r-gray-400 px-3 hover:text-[#23AAEF] cursor-pointer"
+          class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer"
         >
           Cookie Preferences
         </li>
         <li
-          class="border-r border-r-gray-400 px-3 hover:text-[#23AAEF] cursor-pointer"
+          class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer"
         >
           Help
         </li>
         <li
-          class="border-r border-r-gray-400 px-3 hover:text-[#23AAEF] cursor-pointer"
+          class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer"
         >
           Buyer Protection
         </li>
-        <li class="px-3 hover:text-[23AAEF] cursor-pointer">
-          <Icon name="ic:sharp-install-mobile" size="17" />
+        <li class="px-3 hover:text-[#FF4646] cursor-pointer">
+          <icon name="ic:sharp-install-mobile" size="17" />
           App
         </li>
         <li
           @mouseenter="isAccountMenu = true"
           @mouseleave="isAccountMenu = false"
-          class="relative flex items-center px-2.5 hover:text-[23AAEF] h-full cursor-pointer"
+          class="relative flex items-center px-2.5 hover:text-[#FF4646] h-full cursor-pointer"
           :class="
-            isAccountMenu
-              ? 'bg-white border z-40 shadow-[0_15px_100px_40px_rgba(0,0,0,0.3)]'
-              : 'border border-[#FFFFFF]'
+            isAccountmenu
+              ? 'bg-white border z-40 shadow-[0_15px_100PX_40PX_rgba(0,0,0,0.3)]'
+              : 'border border-[#FAFAFA]'
           "
         >
-          <Icon name="ph:user-thin" size="17" />
+          <icon name="ph:user-thin" size="17" />
           Account
-          <Icon name="mdi:chevron-down" size="15" class="ml-5" />
+          <icon name="mdi:chevron-down" size="15" class="ml-5" />
           <div
             id="AccountMenu"
             v-if="isAccountMenu"
-            class="absolute bg-white w-[220px] text-[#0E2167] z-40 top-[38px] -left-[100px] border-x border-b"
+            Class="absolute bg-white w-[220px] text-[#333333] z-40 top-[38px] -left-[100px] border-x border-b"
           >
-            <div v-if="!user">
+            <div v-if="true">
               <div class="text-semibold text-[15px] my-4 px-3">
-                Welcome to Kialla Computers!
+                Welcome to Ella's Creations
               </div>
               <div class="flex items-center gap-1 px-3 mb-3">
                 <NuxtLink
                   to="/auth"
-                  class="bg-[#FF4646] text-center w-full text=[16px] rounded-sm text-white font-semibold p-2"
+                  class="bg-[#FF4646] text-center w-full text-[16px] rounded-sm text-white font-semibold p-2"
                 >
                   Login / Register
                 </NuxtLink>
               </div>
             </div>
-            <div class="border-b" />
+            <div class="broder-b" />
             <ul class="bg-white">
               <li
                 @click="navigateTo('/orders')"
@@ -68,8 +63,7 @@
                 My Orders
               </li>
               <li
-                v-if="user"
-                @click="client.auth.signOut()"
+                v-if="true"
                 class="text-[13px] py-2 px-4 w-full hover:bg-gray-200"
               >
                 Sign Out
@@ -79,84 +73,85 @@
         </li>
       </ul>
     </div>
-
     <div id="MainHeader" class="flex items-center w-full bg-white">
       <div
         class="flex lg:justify-start justify-between gap-10 max-w-[1150px] w-full px-3 py-5 mx-auto"
       >
-        <nuxtLink to="/" class="min-w-[170px]">
-          <img width="170" src="/kc_logo.png" />
+        <nuxtLink to="/" class="min-w-[220px]">
+          <img width="220" src="../public/images/ella.png" />
         </nuxtLink>
-        <div class="max-w[700px] w-full md:block hidden mt-3">
+        <div class="max-w-[700px] w-full md:block hidden">
           <div class="relative">
             <div
-              class="flex items-center border-2 border-[#23AAEF] rounded-md w-full"
+              class="flex items-center mt-3 border-2 border-[#FF4646] rounded-md w-full"
             >
               <input
-                class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none"
-                placeholder="Computer Accessories"
                 type="text"
+                class="w-full placeholder-gray-400 text-sm pl-3 focus:outline-none"
+                placeholder="Handcrafted Creations"
                 v-model="searchItem"
               />
-              <Icon
+              <icon
                 v-if="isSearching"
                 name="eos-icons:loading"
                 size="25"
                 class="mr-2"
               />
               <button
-                class="flex items-center h-[100%] p-1.5 px-2 bg-[#23AAEF]"
+                class="flex items-center h-[100%] p-1.5 px-2 bg-[#FF4646]"
               >
-                <Icon name="ph:magnifying-glass" size="20" color="#0E2167" />
+                <Icon
+                  name="ph:magnifying-glass"
+                  size="20"
+                  style="color: #ffffff"
+                />
               </button>
             </div>
             <div class="absolute bg-white max-w-[700px] h-auto w-full">
-              <div
-                v-if="items && items.data"
-                v-for="item in items.data"
-                class="p-1"
-              >
-                <NuxtLink
-                  :to="`/item/${item.id}`"
+              <div v-if="false" class="p-1">
+                <nuxtLink
+                  to="`/item/1`"
                   class="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100"
                 >
                   <div class="flex items-center">
-                    <img class="rounded-md" width="40" :src="item.url" />
-                    <div class="trancate ml-2">{{ item.title }}</div>
+                    <img
+                      src="https://picsum.photos/id/82/300/320"
+                      class="rounded-md"
+                      width="40"
+                    />
+                    <div class="truncate ml-2">TESTING</div>
                   </div>
-                  <div class="truncate">${{ item.price / 100 }}</div>
-                </NuxtLink>
+                  <div class="truncate">$189.00</div>
+                </nuxtLink>
               </div>
             </div>
           </div>
         </div>
-
-        <NuxtLink to="/shoppingcart" class="flex items-center">
+        <nuxtLink to="/shoppingcart" class="flex items-center mt-2">
           <button
             class="relative md:block hidden"
             @mouseenter="isCartHover = true"
             @mouseleave="isCartHover = false"
           >
             <span
-              class="mt-1 absolute flex items-center justify-center -right-[3px] top-0 bg-[#FF4646] h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full"
+              class="absolute flex items-center justify-center -right-[3px] top-0 bg-[#FF4646] h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full"
             >
-              {{ userStore.cart.length }}
+              0
             </span>
-            <div class="min-w-[40px] mt-3">
-              <Icon
+            <div class="min-w-[40px] mt-2">
+              <icon
                 name="ph:shopping-cart-simple-light"
-                size="33"
+                size="30"
                 :color="isCartHover ? '#FF4646' : ''"
               />
             </div>
           </button>
-        </NuxtLink>
-
+        </nuxtLink>
         <button
           @click="userStore.isMenuOverlay = true"
           class="md:hidden block rounded-full p-1.5 -mt-[4px] hover:bg-gray-200"
         >
-          <Icon name="radix-icons:hamburger-menu" size="33" />
+          <icon name="radix-icons:hamburger-menu" size="30" />
         </button>
       </div>
     </div>
@@ -164,45 +159,16 @@
 
   <Loading v-if="userStore.isLoading" />
 
-  <div class="lg:pt-[150px] md:pt-130px pt-[80px]" />
+  <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]" />
   <slot />
-
-  <Footer v-if="!userStore.isLoading" />
 </template>
 
 <script setup>
 import { useUserStore } from "~/stores/user";
-
 const userStore = useUserStore();
 
-const client = useSupabaseClient();
-const user = useSupabaseUser();
-
 let isAccountMenu = ref(false);
-let isCartHover = ref(false);
-let searchItem = ref("");
+let isCartHover = ref(true);
 let isSearching = ref(false);
-let items = ref(null);
-
-const searchByName = useDebounce(async () => {
-  isSearching.value = true;
-  items.value = await useFetch(
-    `/api/prisma/search-by-name/${searchItem.value}`
-  );
-  isSearching.value = false;
-}, 100);
-
-watch(
-  () => searchItem.value,
-  async () => {
-    if (!searchItem.value) {
-      setTimeout(() => {
-        items.value = "";
-        isSearching.value = false;
-        return;
-      }, 500);
-    }
-    searchByName();
-  }
-);
+let searchItem = ref("");
 </script>

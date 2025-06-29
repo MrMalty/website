@@ -1,24 +1,11 @@
 {
-  "deno.enablePaths": [
-    "supabase/functions"
-  ],
-  "deno.lint": true,
-  "deno.unstable": [
-    "bare-node-builtins",
-    "byonm",
-    "sloppy-imports",
-    "unsafe-proto",
-    "webgpu",
-    "broadcast-channel",
-    "worker-options",
-    "cron",
-    "kv",
-    "ffi",
-    "fs",
-    "http",
-    "net"
-  ],
-  "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  }
+    "vue.autoInsert.dotValue": true,
+    "vue.format.script.initialIndent": true,
+    "vue.format.style.initialIndent": true,
+    "vue.inlayHints.destructuredProps": true,
+    "vue.inlayHints.inlineHandlerLeading": true,
+    "vue.inlayHints.missingProps": true,
+    "vue.inlayHints.optionsWrapper": true,
+    "vue.inlayHints.vBindShorthand": true,
+    "vue.splitEditors.icon": true
 }
