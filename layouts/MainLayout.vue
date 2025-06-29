@@ -23,6 +23,7 @@
           <icon name="ic:sharp-install-mobile" size="17" />
           App
         </li>
+        -->
         <li
           @mouseenter="isAccountMenu = true"
           @mouseleave="isAccountMenu = false"
@@ -56,6 +57,7 @@
             </div>
             <div class="broder-b" />
             <ul class="bg-white">
+              <li v-if="user">Welcome {{ user }}</li>
               <li
                 @click="navigateTo('/orders')"
                 class="text-[13px] py-2 px-4 w-full hover:bg-gray-200"

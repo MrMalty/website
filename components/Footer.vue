@@ -3,22 +3,21 @@
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="md:flex gap-4 justify-between w-full">
         <div class="md:w-[50%] pt-4">
-          <div class="text-lg font-semibold text-[#282828]">Help</div>
-          <div class="text-[#999999] text-sm">
-            Policies and rules, Legal Notice, Product Listing Policy,
-            Intellectual Property Protection, Privacy Policy, Terms of Use,
-            Integrity Compliance
-          </div>
+          <div class="text-lg font-semibold text-[#0E2167] mb-5">Help</div>
         </div>
       </div>
     </div>
   </div>
-
-  <div id="FooterSub" class="w-full bg-[#333333] text-sm text-gray-400">
+  <!--
+  <div
+    ID="FooterSub"
+    class="w-full bg-[#23AAEF] text-sm text-sm text-[#0E2167]"
+  >
     <div class="max-w-[1200px] mx-auto p-4">
       Intellectual Property Protection - Privacy - Sitemap - Terms of Use
     </div>
   </div>
+  -->
 </template>
 
 <script setup></script>
