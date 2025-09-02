@@ -33,7 +33,7 @@ defineProps(["plan"]);
           <span>{{ item }}</span>
         </li>
       </ul>
-      <div class="flex mt-8">
+      <div class="flex mt-8 grow-1">
         <LandingLink
           :href="plan.button.link || '#'"
           block
