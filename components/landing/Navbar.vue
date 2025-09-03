@@ -2,15 +2,15 @@
 const menuitems = [
   {
     title: "Services",
-    path: "/services",
+    path: "services",
   },
   {
     title: "About",
-    path: "/about",
+    path: "about",
   },
   {
     title: "Contact",
-    path: "/contact",
+    path: "contact",
   },
 ];
 
@@ -56,12 +56,12 @@ const open = ref(false);
       >
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           <li v-for="item of menuitems">
-            <a
-              :href="item.path"
+            <NuxtLink
+              :to="item.path"
               class="flex lg:px-3 py-2 text-PrimaryLight hover:text-Primary"
             >
               {{ item.title }}
-            </a>
+          </NuxtLink>
           </li>
         </ul>
         <!--        <div class="lg:hidden flex items-center mt-3 gap-4">
