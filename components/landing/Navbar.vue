@@ -21,11 +21,11 @@ const open = ref(false);
   <LandingContainer>
     <header class="flex flex-col lg:flex-row justify-between items-center my-5">
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg flex items-center"
+        <NuxtLink to="/" class="text-lg flex items-center"
           ><img class="w-[100px]" src="/public/KC_Logo_300x300.png" />
           <span class="font-bold ml-5 text-Primary">Kialla</span
           ><span class="text-PrimaryLight">Computers</span>
-        </a>
+          </Nuxtlink>
         <div class="block lg:hidden">
           <button @click="open = !open" class="text-Primary">
             <svg
