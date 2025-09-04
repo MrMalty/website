@@ -32,7 +32,6 @@ const pricing = [
       "Reset Browser",
       "Update PC OS",
       "Install Reputable Antivirus",
-      "Schedule Scans & Updates",
     ],
     button: {
       text: "Request Virus Clean",
