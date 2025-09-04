@@ -72,8 +72,9 @@ onMounted(() => {
       style="display: none"
       name="botcheck"
     />
+    <input type="hidden" name="subject" value="Data Recovery Enquiry">
     <div class="mb-5">
-      <input type="hidden" name="subject" value="Data Recovery Enquiry">
+      
       <input
         type="text"
         placeholder="Full Name"
