@@ -44,10 +44,10 @@ const pricing = [
     price: "$220/H",
     popular: false,
     features: [
-      "Data Recovery",
-      "Harddrive Datarecovery",
-      "Data Storage Solution",
-      "Backup Solutions",
+      "Hard Drive & SSD Data Recovery",
+      "USB & External Hard Drive Recovery",
+      "Laptop & Desktop Data Retrieval",
+      "Recovery from Malware or Ransomware Attacks",
     ],
     button: {
       text: "Request Data Recovery",
