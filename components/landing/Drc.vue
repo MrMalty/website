@@ -39,7 +39,7 @@
     </LandingSectionhead> -->
 </main>
 <div>
-  Test
+<LandingDrContactForm />
 </div>
 </template>
 
