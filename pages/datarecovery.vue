@@ -16,13 +16,15 @@ definePageMeta({
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-Primary">
-        Empowering small business and home offices to achieve their goals.
+        Our Data Recorvery servces include:
       </h2>
-      <p class="text-lg leading-relaxed text-PrimaryLight">
-        We're a small team! We come from diverse backgrounds, bringing different
-        personalities, experiences and skills to the job. This is what makes our
-        team so special.
-      </p>
+      <ul>
+        <li>Hard Drive & SSD Recovery</li>
+        <li>RAID & Server Recovery</li>
+        <li>USB & External Drive Recovery</li>
+        <li>Laptop & Desktop Data Retrieval</li>
+        <li>Recovery from Malware or Ransomware Attacks</li>
+      </ul>  
     </div>
   </LandingContainer>
 </template>
