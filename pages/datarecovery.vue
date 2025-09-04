@@ -9,9 +9,9 @@ definePageMeta({
     <LandingSectionhead>
       <template v-slot:title>Data Recovery</template>
       <template v-slot:desc>We specialize in recovering lost, deleted, corrupted, or inaccessible data
-                            from a wide range of storage devices. Whether the cause is accidental deletion, 
+                            from a wide range of storage devices.<br />Whether the cause is accidental deletion, 
                             hardware failure, system crash, or malware infection, our advanced tools and 
-                            techniques give you the best chance of restoring valuable information.</template>
+                            techniques<br />give you the best chance of restoring valuable information.</template>
     </LandingSectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
