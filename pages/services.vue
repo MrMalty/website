@@ -31,7 +31,7 @@ const pricing = [
       "Malware Cleaning",
       "Reset Browser",
       "Update PC OS",
-      "Install reputable Antivirus",
+      "Install Reputable Antivirus",
       "Schedule Scans & Updates",
     ],
     button: {
