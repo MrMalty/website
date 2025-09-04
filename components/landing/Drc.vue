@@ -24,7 +24,7 @@
         techniques give you the best chance of restoring valuable information.
       </p>
     </div>
-    <div>
+
       <ul>
         <li>Hard Drive & SSD Recovery</li>
         <li>RAID & Server Recovery</li>
@@ -32,8 +32,6 @@
         <li>Laptop & Desktop Data Retrieval</li>
         <li>Recovery from Malware or Ransomware Attacks</li>
       </ul>  
-
-    </div>
     <!-- <LandingSectionhead>
       <template v-slot:title>Data Recovery</template>
       <template v-slot:desc>We specialize in recovering lost, deleted, corrupted, or inaccessible data
