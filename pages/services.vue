@@ -51,7 +51,7 @@ const pricing = [
     ],
     button: {
       text: "Request Data Recovery",
-      link: "#",
+      link: "datarecovery",
     },
   },
 ];
