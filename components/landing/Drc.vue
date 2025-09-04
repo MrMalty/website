@@ -23,15 +23,13 @@
         hardware failure, system crash, or malware infection, our advanced tools and 
         techniques give you the best chance of restoring valuable information.
       </p>
-    </div>
-
-      <ul>
-        <li>Hard Drive & SSD Recovery</li>
-        <li>RAID & Server Recovery</li>
-        <li>USB & External Drive Recovery</li>
-        <li>Laptop & Desktop Data Retrieval</li>
-        <li>Recovery from Malware or Ransomware Attacks</li>
+      <ul class="grid mt-8 text-left gap-y-4">
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Hard Drive & SSD Recovery</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />USB & External Drive Recovery</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Laptop & Desktop Data Retrieval</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Malware or Ransomware Attacks Recovery</li>
       </ul>  
+    </div>
     <!-- <LandingSectionhead>
       <template v-slot:title>Data Recovery</template>
       <template v-slot:desc>We specialize in recovering lost, deleted, corrupted, or inaccessible data
