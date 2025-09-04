@@ -25,7 +25,7 @@
         and advice, we’re here to help you focus on what matters most—growing
         your business.
       </p>
-      <!--
+      
       <div class="mt-6 flex flex-col sm:flex-row gap-3">
         <LandingLink
           href="https://github.com/Gr33nW33n/nuxtship-template"
@@ -41,7 +41,7 @@
           target="_blank"
           >View Repo</LandingLink
         >
-      </div>-->
+      </div>
     </div>
   </main>
 </template>
