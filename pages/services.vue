@@ -47,7 +47,7 @@ const pricing = [
       "Hard Drive & SSD Data Recovery",
       "USB & External Hard Drive Recovery",
       "Laptop & Desktop Data Retrieval",
-      "Recovery from Malware or Ransomware Attacks",
+      "Malware or Ransomware Attacks Recovery",
     ],
     button: {
       text: "Request Data Recovery",
