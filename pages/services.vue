@@ -40,7 +40,7 @@ const pricing = [
     },
   },
   {
-    name: "Data Recovery & Storage",
+    name: "Data Recovery",
     price: "$220/H",
     popular: false,
     features: [
