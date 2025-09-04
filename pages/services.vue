@@ -17,7 +17,7 @@ const pricing = [
       "iPad and Tablet Setup",
     ],
     button: {
-      text: "Request Computer Service",
+      text: "Request Service",
       link: "#",
     },
   },
