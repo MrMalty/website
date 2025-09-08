@@ -2,6 +2,12 @@
 definePageMeta({
   layout: "landing",
 });
+
+import { useHead } from '#app';
+
+useHead({
+  title: 'Kialla Computers',
+});
 </script>
 
 <template>
