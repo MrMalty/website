@@ -13,7 +13,7 @@
 
     <div>
       <h1
-        class="text-4xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight text-MainHeader"
+        class="text-4xl lg:text-6xl xl:text-7xl text-center font-bold lg:tracking-tight text-MainHeader"
       >
         Data Recovery.
       </h1>
