@@ -15,19 +15,25 @@
       <h1
         class="text-4xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight text-MainHeader"
       >
-        Data Recovery.
+        Virus Cleaning.
       </h1>
       <p class="text-lg mt-4 text-Primary max-w-xl">
-        We specialize in recovering lost, deleted, corrupted, or inaccessible data
-        from a wide range of storage devices. Whether the cause is accidental deletion, 
-        hardware failure, system crash, or malware infection, our advanced tools and 
-        techniques give you the best chance of restoring valuable information.
+        Our Virus Cleaning Service is designed to completely remove viruses, malware, spyware, 
+        and other malicious threats from your computer. We don’t just run a quick scan — we 
+        provide a thorough inspection and cleaning process to ensure your system is safe, stable, 
+        and performing properly.
       </p>
       <ul class="grid mt-8 text-left gap-y-4">
-        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Hard Drive & SSD Recovery</li>
-        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />USB & External Drive Recovery</li>
-        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Laptop & Desktop Data Retrieval</li>
-        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Malware or Ransomware Attacks Recovery</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Full system diagnostics and virus detection</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Removal of viruses, spyware, ransomware, and trojans</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Cleaning of malicious files, programs, and browser hijackers</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Performance and security optimization</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Repair of damaged system files and settings</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Installation or update of antivirus and security tools</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Professional in-office, in-home or remote cleaning</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Safe backup and protection of important files (where possible)</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Final system scan to confirm your PC is virus-free</li>
+        <li class="flex items-start gap-3 text-ServiceItems"><LandingTick className="w-6 h-6" />Security advice and prevention tips</li>
       </ul>  
     </div>
     <!-- <LandingSectionhead>
@@ -39,7 +45,7 @@
     </LandingSectionhead> -->
 </main>
 <div>
-<LandingDrContactForm />
+<LandingVcContactForm />
 </div>
 </template>
 
