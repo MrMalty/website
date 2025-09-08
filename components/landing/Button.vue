@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 interface Props {
   size?: "md" | "lg";
   block?: boolean;
