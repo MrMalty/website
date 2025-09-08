@@ -17,6 +17,7 @@
       >
         Virus Cleaning.
       </h1>
+      <h2>$120/H</h2>
       <p class="text-lg mt-4 text-Primary max-w-xl">
         Our Virus Cleaning Service is designed to completely remove viruses, malware, spyware, 
         and other malicious threats from your computer. We don’t just run a quick scan — we 
