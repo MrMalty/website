@@ -29,7 +29,7 @@ const styles = {
   <button
     :class="[
       'rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200',
-      block && 'w-full',
+      block && 'w-1/2',
       sizes[size],
       styles[styleName],
       className,
