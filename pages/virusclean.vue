@@ -1,7 +1,7 @@
 <script setup>import { useHead } from '#app';
 
 useHead({
-  title: 'Kialla Computers - Virus Clean',
+  title: 'Kialla Computers - Virus Cleaning',
 });
 
 definePageMeta({
