@@ -1,4 +1,10 @@
 <script setup>
+import { useHead } from '#app';
+
+useHead({
+  title: 'Kialla Computers - Contact Us',
+});
+
 definePageMeta({
   layout: "landing",
 });

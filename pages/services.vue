@@ -2,7 +2,11 @@
 definePageMeta({
   layout: "landing",
 });
+import { useHead } from '#app';
 
+useHead({
+  title: 'Kialla Computers - Services',
+});
 const pricing = [
   {
     name: "Computer Service",
