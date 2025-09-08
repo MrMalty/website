@@ -22,7 +22,7 @@ const pricing = [
     ],
     button: {
       text: "Request Service",
-      link: "#",
+      link: "computerservice",
     },
   },
   {
@@ -39,7 +39,7 @@ const pricing = [
     ],
     button: {
       text: "Request Virus Clean",
-      link: "/",
+      link: "virusclean",
     },
   },
   {
