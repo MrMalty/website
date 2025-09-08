@@ -94,7 +94,7 @@ onMounted(() => {
         placeholder="Email Address"
         name="email"
         required
-        class="w-lg px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
+        class="w-2xl px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
       />
       <div class="empty-feedback text-red-400 text-sm mt-1">
         Please provide your email address.
