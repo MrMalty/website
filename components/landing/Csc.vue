@@ -17,7 +17,7 @@
       >
         Computer Servicing.
       </h1>
-      <h2 class="text-xl lg:text-2xl xl:text-4xl text-center font-bold lg:tracking-tight text-MainHeader">$120/H</h2>
+      <h2 class="text-xl lg:text-2xl xl:text-4xl text-center font-bold lg:tracking-tight text-MainHeader">$66/H</h2>
       <p class="text-lg mt-4 text-Primary max-w-xl">
         Our Computer Service provides complete solutions to keep your technology running smoothly. Whether it’s a slow computer, 
         a broken part, or software problems, we deliver fast and effective support to get you back up and running.
