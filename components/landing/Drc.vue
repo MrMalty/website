@@ -17,6 +17,7 @@
       >
         Data Recovery.
       </h1>
+      <h2>$220/H</h2>
       <p class="text-lg mt-4 text-Primary max-w-xl">
         We specialize in recovering lost, deleted, corrupted, or inaccessible data
         from a wide range of storage devices. Whether the cause is accidental deletion, 
