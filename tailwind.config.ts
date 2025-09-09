@@ -27,10 +27,9 @@ export default {
         ButtonPrimary: "#596F95",
         ButtonPrimaryHover: "#8BD0DF",
         ButtonPrimaryHoverText: "#596F95",
-        ButtonOutline: "#596F95",
+        ButtonOutline: "#2CB6D5",
         ButtonOutlineHover: "#8BD0DF",
-        ButtonOutlineHoverText: "#596F95",
-
+        ButtonOutlineHoverText: "#404E71",
         ButtonLight: "#8BD0DF",
         ButtonPrimaryText: "#8BD0DF",
         ButtonText: "#596F95",

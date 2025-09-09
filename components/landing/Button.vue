@@ -19,9 +19,9 @@ const sizes = {
 
 const styles = {
   outline:
-    "border-2 border-ButtonOutline hover:bg-ButtonOutline text-ButtonOutline hover:text-ButtonOutlineHover",
+    "border-2 border-ButtonOutline hover:bg-ButtonOutline text-ButtonOutline hover:text-ButtonOutlineHoverText",
   primary:
-    "bg-ButtonPrimary text-ButtonPrimaryText hover:bg-ButtonPrimaryHover hover:text-ButtonPrimaryHoverText border-2 border-transparent",
+    "bg-ButtonPrimaryBg text-ButtonPrimaryText hover:bg-ButtonPrimaryHover hover:border-ButtonPrimaryHoverB hover:text-ButtonPrimaryHoverText border-2 border-transparent",
 };
 </script>
 
@@ -29,7 +29,7 @@ const styles = {
   <button
     :class="[
       'rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200',
-      block && 'sm:w-full lg:w-1/2',
+      block && 'sm:w-full lg:w-1/2 font-bold',
       sizes[size],
       styles[styleName],
       className,
