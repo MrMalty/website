@@ -79,7 +79,7 @@ onMounted(() => {
         type="text"
         placeholder="Full Name"
         required
-        class="sm:w-full w-1/2 px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
+        class="sm:w-full lg:w-1/2 px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
         name="name"
       />
       <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
