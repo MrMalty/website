@@ -79,7 +79,7 @@ onMounted(() => {
         type="text"
         placeholder="Full Name"
         required
-        class="w-1/2 px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
+        class="sm:w-full w-1/2 px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
         name="name"
       />
       <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
@@ -94,7 +94,7 @@ onMounted(() => {
         placeholder="Email Address"
         name="email"
         required
-        class="w-1/2 px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
+        class="sm:w-full w-1/2 px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
       />
       <div class="empty-feedback text-red-400 text-sm mt-1">
         Please provide your email address.
@@ -108,7 +108,7 @@ onMounted(() => {
         name="message"
         required
         placeholder="Your Message"
-        class="w-1/2 px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none h-36 focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
+        class="sm:w-full w-1/2 px-4 py-3 border-2 placeholder:text-InputPrimary rounded-md outline-none h-36 focus:ring-4 border-InputBorder focus:border-InputBorderFocus ring-InputBorderRing"
       ></textarea>
       <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
         Please enter your Data Recovery query.
