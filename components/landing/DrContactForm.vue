@@ -72,9 +72,8 @@ onMounted(() => {
       style="display: none"
       name="botcheck"
     />
-    <input type="hidden" name="subject" value="Data Recovery Enquiry">
+    <input type="hidden" name="subject" value="Data Recovery Enquiry" />
     <div class="mb-5">
-      
       <input
         type="text"
         placeholder="Full Name"
@@ -114,7 +113,7 @@ onMounted(() => {
         Please enter your Data Recovery query.
       </div>
     </div>
-    <LandingButton type="submit" styleName="primary" size="lg" block
+    <LandingButton type="submit" styleName="primary" size="md" block
       >Request Data Recovery</LandingButton
     >
     <div id="result" class="mt-3 text-center"></div>
