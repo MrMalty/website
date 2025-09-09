@@ -33,7 +33,7 @@ const styles = {
     :to="href"
     :class="[
       'rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200',
-      block && 'w-full',
+      block && 'w-full font-bold',
       sizes[size],
       styles[styleName],
     ]"

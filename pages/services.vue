@@ -2,10 +2,10 @@
 definePageMeta({
   layout: "landing",
 });
-import { useHead } from '#app';
+import { useHead } from "#app";
 
 useHead({
-  title: 'Kialla Computers - Services',
+  title: "Kialla Computers - Services",
 });
 const pricing = [
   {
@@ -21,7 +21,7 @@ const pricing = [
       "iPad and Tablet Setup",
     ],
     button: {
-      text: "Request Service",
+      text: "Request Computer Service",
       link: "computerservice",
     },
   },
@@ -67,9 +67,7 @@ const pricing = [
       <template v-slot:desc>Simple & Afforable pricing. No Surprises.</template>
     </LandingSectionhead>
 
-    <div
-      class="grid md:grid-flow-col gap-10 mx-auto max-w-screen-lg mt-12"
-    >
+    <div class="grid md:grid-flow-col gap-10 mx-auto max-w-screen-lg mt-12">
       <LandingPricing v-for="item of pricing" :plan="item" />
     </div>
   </LandingContainer>
