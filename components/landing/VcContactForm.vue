@@ -115,7 +115,7 @@ onMounted(() => {
       </div>
     </div>
     <LandingButton type="submit" styleName="primary" size="lg" block
-      >Send Message</LandingButton
+      >Request Virus Clean</LandingButton
     >
     <div id="result" class="mt-3 text-center"></div>
   </form>
