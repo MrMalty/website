@@ -42,7 +42,7 @@ export default {
         ServicePrice: "#BED2EF",
         ServiceItems: "#404E71",
 
-        FooterText: "#2CB6D5",
+        FooterText: "#404E71",
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
