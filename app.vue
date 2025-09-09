@@ -3,6 +3,4 @@
     <NuxtPage />
   </NuxtLayout>
 </template>
-<script>
-// ddf
-</script>
+<script></script>

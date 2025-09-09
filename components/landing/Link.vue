@@ -20,9 +20,9 @@ const sizes = {
 
 const styles = {
   outline:
-    "bg-white border-2 border-ButtonPrimary hover:bg-ButtonLight text-ButtonText",
+    "border-2 border-ButtonOutline hover:bg-ButtonOutline text-ButtonOutline hover:text-ButtonOutlineHoverText",
   primary:
-    "bg-ButtonPrimary text-ButtonPrimaryText hover:bg-ButtonLight hover:text-ButtonText hover:border-ButtonPrimary border-2 border-transparent",
+    "bg-ButtonPrimaryBg text-ButtonPrimaryText hover:bg-ButtonPrimaryHover hover:border-ButtonPrimaryHoverB hover:text-ButtonPrimaryHoverText border-2 border-transparent",
   inverted: "bg-white text-black border-2 border-transparent",
   muted: "bg-gray-100 hover:bg-gray-200 border-2 border-transparent",
 };
