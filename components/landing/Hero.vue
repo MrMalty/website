@@ -13,11 +13,11 @@
 
     <div>
       <h1
-        class="text-4xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight text-MainHeader"
+        class="ml-10 text-4xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight text-MainHeader"
       >
         Supporting small businesses and home offices.
       </h1>
-      <p class="text-lg mt-4 text-Primary max-w-xl">
+      <p class="ml-10 text-lg mt-4 text-Primary max-w-xl">
         We understand the unique challenges small businesses and home offices
         face in today’s fast-paced world. That’s why we provide tailored
         solutions designed to improve efficiency, reduce costs, and keep your
