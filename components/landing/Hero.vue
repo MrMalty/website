@@ -22,7 +22,7 @@
         face in today’s fast-paced world. That’s why we provide tailored
         solutions designed to improve efficiency, reduce costs, and keep your
         operations running smoothly. From reliable IT support to practical tools
-        and advice, we’re here to help you focus on what matters most—growing
+        and advice, we’re here to help you focus on what matters most growing
         your business.
       </p>
       <!--
