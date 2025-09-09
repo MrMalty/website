@@ -11,7 +11,7 @@ const pricing = [
   {
     name: "Computer Service",
     price: "$66/H",
-    popular: false,
+    popular: true,
     features: [
       "Computer Repairs & Upgrades",
       "Network Setup & Support",
@@ -28,7 +28,7 @@ const pricing = [
   {
     name: "Virus Cleaning",
     price: "$120/H",
-    popular: false,
+    popular: true,
     features: [
       "Backup Import Files",
       "Scan and Clean PC",
@@ -45,7 +45,7 @@ const pricing = [
   {
     name: "Data Recovery",
     price: "$220/H",
-    popular: false,
+    popular: true,
     features: [
       "Hard Drive & SSD Data Recovery",
       "USB & External Hard Drive Recovery",
