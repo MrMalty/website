@@ -12,19 +12,19 @@ const products = [
     name: "Cougar GLE 1000 1000W 80+ Gold modular ATX3.1 PCIe 5.1 PSU",
     price: "220",
     popular: true,
-    image: "/public/img/Products/csps1gle1000.jpg",
+    image: "img/Products/csps1gle1000.jpg",
   },
   {
     name: "Asus Expertbook P5 P5405CSA-NZ0241X U5 14in 16G 512G W11P AI",
     price: "2500",
     popular: true,
-    image: "/public/img/Products/nbasp5405csa-41.jpg",
+    image: "img/Products/nbasp5405csa-41.jpg",
   },
   {
     name: "MSI Thin 15 B13UDX-2278AU Gaming notebook i5-13420H RTX3050",
     price: "1460",
     popular: true,
-    image: "/public/img/Products/nbmt15b13ud2278.jpg",
+    image: "img/Products/nbmt15b13ud2278.jpg",
   },
 ];
 </script>
