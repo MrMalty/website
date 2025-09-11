@@ -26,6 +26,12 @@ const products = [
     popular: true,
     image: "img/Products/nbmt15b13ud2278.jpg",
   },
+  {
+    name: "Cougar SPEEDER ONE Mesh Gaming Chair",
+    price: "310",
+    popular: true,
+    image: "img/Products/chspeeder-one.jpg",
+  },
 ];
 </script>
 
