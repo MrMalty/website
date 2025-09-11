@@ -36,7 +36,9 @@ const products = [
       <template v-slot:desc>Simple & Afforable pricing. No Surprises.</template>
     </LandingSectionhead>
 
-    <div class="grid md:grid-flow-col gap-10 mx-auto max-w-screen-lg mt-12">
+    <div
+      class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+    >
       <LandingProducts v-for="item of products" :plan="item" />
     </div>
   </LandingContainer>
