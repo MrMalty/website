@@ -1,6 +1,10 @@
 <script setup>
 const menuitems = [
   {
+    title: "Store",
+    path: "store",
+  },
+  {
     title: "Services",
     path: "services",
   },
