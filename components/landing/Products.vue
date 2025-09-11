@@ -6,8 +6,8 @@ defineProps(["plan"]);
   <div>
     <div class="group relative">
       <img
-        :src="plan.image"
-        alt=""
+        src="/public/img/Products/csps1gle1000.jpg"
+        alt="Front of men&#039;s Basic Tee in black."
         class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
       />
       <div class="mt-4 flex justify-between">
