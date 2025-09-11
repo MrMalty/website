@@ -12,7 +12,7 @@ const products = [
     name: "Computer Service",
     price: "66",
     popular: true,
-    image:"",
+    image: "",
     features: [
       "Computer Repairs & Upgrades",
       "Network Setup & Support",
@@ -26,7 +26,7 @@ const products = [
       link: "#",
     },
   },
-  ];
+];
 </script>
 
 <template>
@@ -37,7 +37,7 @@ const products = [
     </LandingSectionhead>
 
     <div class="grid md:grid-flow-col gap-10 mx-auto max-w-screen-lg mt-12">
-      <LandingPricing v-for="item of products" :plan="item" />
+      <LandingProducts v-for="item of products" :plan="item" />
     </div>
   </LandingContainer>
 </template>
