@@ -7,11 +7,12 @@ import { useHead } from "#app";
 useHead({
   title: "Kialla Computers - Services",
 });
-const pricing = [
+const products = [
   {
     name: "Computer Service",
-    price: "$66/H",
+    price: "66",
     popular: true,
+    image:"",
     features: [
       "Computer Repairs & Upgrades",
       "Network Setup & Support",
@@ -21,40 +22,8 @@ const pricing = [
       "iPad and Tablet Setup",
     ],
     button: {
-      text: "Request a Service",
-      link: "computerservice",
-    },
-  },
-  {
-    name: "Virus Cleaning",
-    price: "$120/H",
-    popular: true,
-    features: [
-      "Backup Import Files",
-      "Scan and Clean PC",
-      "Malware Cleaning",
-      "Reset Browser",
-      "Update PC OS",
-      "Install Reputable Antivirus",
-    ],
-    button: {
-      text: "Request Virus Clean",
-      link: "virusclean",
-    },
-  },
-  {
-    name: "Data Recovery",
-    price: "$220/H",
-    popular: true,
-    features: [
-      "Hard Drive & SSD Data Recovery",
-      "USB & External Hard Drive Recovery",
-      "Laptop & Desktop Data Retrieval",
-      "Malware or Ransomware Attacks Recovery",
-    ],
-    button: {
-      text: "Request Data Recovery",
-      link: "datarecovery",
+      text: "Call to Order",
+      link: "#",
     },
   },
 ];
