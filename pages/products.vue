@@ -26,42 +26,6 @@ const products = [
       link: "#",
     },
   },
-  {
-    name: "Computer Service",
-    price: "66",
-    popular: true,
-    image:"",
-    features: [
-      "Computer Repairs & Upgrades",
-      "Network Setup & Support",
-      "Software Isntallation & Support",
-      "IT Security Solutions",
-      "Printer Setups & Configuration",
-      "iPad and Tablet Setup",
-    ],
-    button: {
-      text: "Call to Order",
-      link: "#",
-    },
-  },
-  {
-    name: "Computer Service",
-    price: "66",
-    popular: true,
-    image:"",
-    features: [
-      "Computer Repairs & Upgrades",
-      "Network Setup & Support",
-      "Software Isntallation & Support",
-      "IT Security Solutions",
-      "Printer Setups & Configuration",
-      "iPad and Tablet Setup",
-    ],
-    button: {
-      text: "Call to Order",
-      link: "#",
-    },
-  },
   ];
 </script>
 
@@ -73,7 +37,7 @@ const products = [
     </LandingSectionhead>
 
     <div class="grid md:grid-flow-col gap-10 mx-auto max-w-screen-lg mt-12">
-      <LandingPricing v-for="item of pricing" :plan="item" />
+      <LandingPricing v-for="item of products" :plan="item" />
     </div>
   </LandingContainer>
 </template>
