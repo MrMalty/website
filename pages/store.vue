@@ -32,8 +32,7 @@ const products = [
 <template>
   <LandingContainer>
     <LandingSectionhead>
-      <template v-slot:title>Services</template>
-      <template v-slot:desc>Simple & Afforable pricing. No Surprises.</template>
+      <template v-slot:title>Store</template>
     </LandingSectionhead>
 
     <div
