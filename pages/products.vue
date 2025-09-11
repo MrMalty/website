@@ -26,7 +26,25 @@ const products = [
       link: "#",
     },
   },
-];
+  {
+    name: "Computer Service",
+    price: "66",
+    popular: true,
+    image:"",
+    features: [
+      "Computer Repairs & Upgrades",
+      "Network Setup & Support",
+      "Software Isntallation & Support",
+      "IT Security Solutions",
+      "Printer Setups & Configuration",
+      "iPad and Tablet Setup",
+    ],
+    button: {
+      text: "Call to Order",
+      link: "#",
+    },
+  },
+  ];
 </script>
 
 <template>
