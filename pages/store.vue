@@ -35,6 +35,7 @@ const products = [
   },
 ];
 
+import { createClient } from '@supabase/supabase-js'
 const client = usesupabaseclient()
 const catergories = ref([])
 
