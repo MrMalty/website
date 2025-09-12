@@ -35,9 +35,10 @@ const products = [
 ];
 
 import { createClient } from '@supabase/supabase-js'
-const supabaseUrl = process.env.SUPABASE_DATABASE_URL
-const supabaseKey = process.env.SUPABASE_ANON_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
+const supabase = createClient(
+  process.env.SUPABASE_DATABASE_URL,
+  process.env.PUBLIC_SUPABASE_ANON_KEY
+);
 
 </script>
 
