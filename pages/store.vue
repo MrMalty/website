@@ -42,7 +42,7 @@ const catergories = ref([])
 onMounted(async () => {
   const { data, error } = await client.from('catergories').select()
   catergories.value = data
-}
+},
 
 </script>
 
