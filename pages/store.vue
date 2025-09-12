@@ -3,6 +3,7 @@ definePageMeta({
   layout: "landing",
 });
 import { useHead } from "#app";
+import { onMounted } from "vue";
 
 useHead({
   title: "Kialla Computers - Services",
@@ -34,11 +35,14 @@ const products = [
   },
 ];
 
-import { createClient } from '@supabase/supabase-js'
-const supabase = createClient(
-  process.env.SUPABASE_DATABASE_URL,
-  process.env.SUPABASE_ANON_KEY
-);
+const client = usesupabaseclient()
+const catergories = ref([])
+
+
+onMounted(async () => {
+  const { data, error } = await client.from('catergories').select()
+  catergories.value = data
+}
 
 </script>
 
