@@ -35,15 +35,25 @@ const products = [
   },
 ];
 
-const client = usesupabaseclient();
+const supabase = useSupabaseClient();
 const catergories = ref([]);
-
+const frontpageitems = ref([]);
 
 onMounted(async () => {
-  const { data, error } = await client.from('catergories').select()
+  const { data, error } = await supabase
+    .from("catergories")
+    .select()
+    .order("catergory", { ascending: true });
   catergories.value = data;
-});
+  console.log(data);
 
+  const { product, errorproduct } = await supabase
+    .from("products")
+    .eq("frontpage", "True")
+    .select();
+  frontpageitems.value = product;
+  console.log(product);
+});
 </script>
 
 <template>
@@ -52,10 +62,19 @@ onMounted(async () => {
       <template v-slot:title>Store</template>
     </LandingSectionhead>
 
-    <div
-      class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
-    >
-      <LandingProducts v-for="item of products" :plan="item" />
+    <div class="mt-6 flex flex-cols mx-auto">
+      <div class="mt-6 w-[300px] px-6">
+        <p class="border-b border-FooterText mb-5">Catergories:</p>
+        <div v-for="cat in catergories" :key="catergories.id" class="">
+          {{ cat.catergory }}
+        </div>
+      </div>
+
+      <div
+        class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+      >
+        <LandingProducts v-for="item of products" :plan="item" />
+      </div>
     </div>
   </LandingContainer>
 </template>
