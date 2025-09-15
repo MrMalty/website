@@ -8,7 +8,7 @@ import { onMounted } from "vue";
 useHead({
   title: "Kialla Computers - Services",
 });
-
+//
 const supabase = useSupabaseClient();
 const catergories = ref([]);
 const frontpageitems = ref([]);
