@@ -8,32 +8,6 @@ import { onMounted } from "vue";
 useHead({
   title: "Kialla Computers - Services",
 });
-const products = [
-  {
-    name: "Cougar GLE 1000 1000W 80+ Gold modular ATX3.1 PCIe 5.1 PSU",
-    price: "220",
-    popular: true,
-    image: "img/Products/csps1gle1000.jpg",
-  },
-  {
-    name: "Asus Expertbook P5 P5405CSA-NZ0241X U5 14in 16G 512G W11P AI",
-    price: "2500",
-    popular: true,
-    image: "img/Products/nbasp5405csa-41.jpg",
-  },
-  {
-    name: "MSI Thin 15 B13UDX-2278AU Gaming notebook i5-13420H RTX3050",
-    price: "1460",
-    popular: true,
-    image: "img/Products/nbmt15b13ud2278.jpg",
-  },
-  {
-    name: "Cougar SPEEDER ONE Mesh Gaming Chair",
-    price: "310",
-    popular: true,
-    image: "img/Products/chspeeder-one.jpg",
-  },
-];
 
 const supabase = useSupabaseClient();
 const catergories = ref([]);
@@ -46,13 +20,16 @@ onMounted(async () => {
     .order("catergory", { ascending: true });
   catergories.value = data;
   console.log(data);
+});
 
-  const { product, errorproduct } = await supabase
+onMounted(async () => {
+  const { data, error } = await supabase
     .from("products")
-    .eq("frontpage", "True")
-    .select();
-  frontpageitems.value = product;
-  console.log(product);
+    .select()
+    .eq("frontpage", "Yes");
+
+  frontpageitems.value = data;
+  console.log(data, error);
 });
 </script>
 
@@ -73,7 +50,7 @@ onMounted(async () => {
       <div
         class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
       >
-        <LandingProducts v-for="item of products" :plan="item" />
+        <LandingFrontPageProducts v-for="item of frontpageitems" :plan="item" />
       </div>
     </div>
   </LandingContainer>
