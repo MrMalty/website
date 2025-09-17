@@ -18,7 +18,7 @@ onMounted(async () => {
     .from("categories")
     .select()
     .order("categoryname", { ascending: true });
-    .eq("parentcategoryid", null)
+    .is("parentcategoryid", null)
   catrgories.value = data;
   console.log(data);
 });
