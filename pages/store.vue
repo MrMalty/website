@@ -17,8 +17,9 @@ onMounted(async () => {
   const { data, error } = await supabase
     .from("categories")
     .select()
-    .order("categoryname", { ascending: true });
     .is("parentcategoryid", null)
+    .order("categoryname", { ascending: true });
+
   catrgories.value = data;
   console.log(data);
 });
