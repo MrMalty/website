@@ -12,6 +12,7 @@ useHead({
 const supabase = useSupabaseClient();
 const categories = ref([]);
 const frontpageitems = ref([]);
+const primarycategories = ref([]);
 
 onMounted(async () => {
   const { data, error } = await supabase
@@ -19,7 +20,7 @@ onMounted(async () => {
     .select()
     .order("categoryname", { ascending: true });
 
-  const PrimaryCategories = data.filter(
+  const primarycategories = data.filter(
     (item) => item.parentcategoryid === null
   );
 
