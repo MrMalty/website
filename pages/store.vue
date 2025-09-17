@@ -20,7 +20,7 @@ onMounted(async () => {
     .is("parentcategoryid", null)
     .order("categoryname", { ascending: true });
 
-  catrgories.value = data;
+  categories.value = data;
   console.log(data);
 });
 
