@@ -44,7 +44,7 @@ onMounted(async () => {
     <div class="mt-6 flex flex-cols mx-auto">
       <div class="mt-6 w-[300px] px-6">
         <p class="border-b border-FooterText mb-5">Categories:</p>
-        <div v-for="cat in catergories" :key="catergories.id" class="">
+        <div v-for="cat in categories" :key="categories.id" class="">
           {{ cat.categoryname }}
         </div>
       </div>
