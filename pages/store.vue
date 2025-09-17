@@ -15,10 +15,11 @@ const frontpageitems = ref([]);
 
 onMounted(async () => {
   const { data, error } = await supabase
-    .from("catergories")
+    .from("categories")
     .select()
-    .order("catergory", { ascending: true });
-  catergories.value = data;
+    .order("categoryname", { ascending: true });
+    .eq("parentcategoryid", null)
+  catrgories.value = data;
   console.log(data);
 });
 
@@ -41,9 +42,9 @@ onMounted(async () => {
 
     <div class="mt-6 flex flex-cols mx-auto">
       <div class="mt-6 w-[300px] px-6">
-        <p class="border-b border-FooterText mb-5">Catergories:</p>
+        <p class="border-b border-FooterText mb-5">Categories:</p>
         <div v-for="cat in catergories" :key="catergories.id" class="">
-          {{ cat.catergory }}
+          {{ cat.categoryname }}
         </div>
       </div>
 
