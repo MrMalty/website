@@ -19,6 +19,10 @@ onMounted(async () => {
     .select()
     .order("categoryname", { ascending: true });
 
+  const PrimaryCategories = data.filter(
+    (item) => item.parentcategoryid === null
+  );
+
   categories.value = data;
   console.log(data);
 });
