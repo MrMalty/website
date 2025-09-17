@@ -10,7 +10,7 @@ useHead({
 });
 //
 const supabase = useSupabaseClient();
-const catergories = ref([]);
+const categories = ref([]);
 const frontpageitems = ref([]);
 
 onMounted(async () => {
