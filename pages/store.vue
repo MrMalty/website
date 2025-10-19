@@ -50,7 +50,7 @@ onMounted(async () => {
               <NuxtLink v-if="cat.categoryitems === null">{{
                 cat.categoryname
               }}</NuxtLink>
-              <NuxtLink v-else to="/store/{$cat.id}">{{
+              <NuxtLink v-else to="/store/$cat.id">{{
                 cat.categoryname
               }}</NuxtLink>
             </li>
@@ -63,7 +63,7 @@ onMounted(async () => {
                 :key="item"
                 class="py-1 font-light"
               >
-                <NuxtLink to="/store">{{ item }}</NuxtLink>
+                <NuxtLink to="/store/#cat.id">{{ item }}</NuxtLink>
               </li>
             </ul>
           </ul>
