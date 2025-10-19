@@ -47,8 +47,12 @@ onMounted(async () => {
         <div v-for="(cat, id) in categories" :key="id" class="">
           <ul>
             <li class="px-4 py-2 font-semibold">
-              <a v-if="cat.categoryitems === null">{{ cat.categoryname }}</a>
-              <a v-else href="/store/{$cat.id}">{{ cat.categoryname }}</a>
+              <NuxtLink v-if="cat.categoryitems === null">{{
+                cat.categoryname
+              }}</NuxtLink>
+              <NuxtLink v-else to="/store/{$cat.id}">{{
+                cat.categoryname
+              }}</NuxtLink>
             </li>
             <ul
               v-if="cat.categoryitems"
