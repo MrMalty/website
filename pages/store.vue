@@ -48,7 +48,7 @@ onMounted(async () => {
           <ul>
             <li class="px-4 py-2 font-semibold">
               <a v-if="cat.categoryitems === null">{{ cat.categoryname }}</a>
-              <a v-else href="/store/$cat.id">{{ cat.categoryname }}</a>
+              <a v-else href="/store/" &$cat.id>{{ cat.categoryname }}</a>
             </li>
             <ul
               v-if="cat.categoryitems"
