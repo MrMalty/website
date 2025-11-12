@@ -55,6 +55,7 @@ onMounted(() => {
 <template>
   <!-- To make this contact form work, create your free access key from https://web3forms.com/
      Then you will get all form submissions in your email inbox. -->
+  <p>{{ item.name }}</p>
   <form
     action="https://api.web3forms.com/submit"
     method="POST"
