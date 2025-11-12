@@ -2,7 +2,7 @@
 import { useHead } from "#app";
 
 useHead({
-  title: "Kialla Computers - Data Recovery",
+  title: "Kialla Computers - Product Enquiry",
 });
 
 definePageMeta({
