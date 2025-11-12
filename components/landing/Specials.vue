@@ -5,16 +5,29 @@ defineProps(["plan"]);
 <template>
   <div>
     <div
-      class="flex flex-col h-[500px] w-[310px] order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6 rounded-lg"
+      class="flex flex-col items-stretch h-[950px] w-[340px] order-first lg:order-none border-4 border-SpecialBorder border-opacity-30 py-5 px-6 rounded-lg"
     >
       <div class="text-center">
-        <h4 class="text-lg font-medium text-ServiceHeader">{{ plan.name }}</h4>
-        <p class="mt-3 text-4xl font-bold text-ServicePrice md:text-4xl">
+        <h4 class="text-md md:text-lg font-medium text-ServiceHeader">
+          {{ plan.name }}
+        </h4>
+        <p v-if="plan.image" class="flex justify-center">
+          <img :src="`/img/products/${plan.image}`" width="250" />
+        </p>
+        <p class="text-2xl md:text-4xl font-bold text-SpecialPrice">
+          {{ plan.spec }}
+        </p>
+        <p
+          class="text-xl lg:text-2xl font-bold text-ServicePriceOrg line-through text-opacity-50"
+        >
           {{
             plan.price && typeof plan.price === "object"
               ? plan.price.monthly
               : plan.price
           }}
+        </p>
+        <p class="text-xs md:text-sm font-bold text-SpecialExp">
+          Offer Exp : {{ plan.exp }}
         </p>
         <!-- {
         plan.price.original && (
@@ -24,12 +37,11 @@ defineProps(["plan"]);
         )
       } -->
       </div>
-      <ul class="grid mt-8 text-left gap-y-4">
+      <ul class="grid mt-4 text-left gap-y-4">
         <li
           v-for="item of plan.features"
           class="flex items-start gap-3 text-ServiceItems"
         >
-          <LandingTick v-if="item" className="w-6 h-6" />
           <span>{{ item }}</span>
         </li>
       </ul>
@@ -38,6 +50,7 @@ defineProps(["plan"]);
           :href="plan.button.link || '#'"
           block
           :styleName="plan.popular ? 'primary' : 'outline'"
+          :item="item"
         >
           {{ plan.button.text || "Get Started" }}
         </LandingLink>

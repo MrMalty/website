@@ -13,6 +13,7 @@ const pricing = [
     price: "$66/H",
     popular: true,
     features: [
+      "Call Fee $99.00 inc 1st hour",
       "Computer Repairs & Upgrades",
       "Network Setup & Support",
       "Software Isntallation & Support",
@@ -48,9 +49,9 @@ const pricing = [
     popular: true,
     features: [
       "Hard Drive & SSD Data Recovery",
-      "USB & External Hard Drive Recovery",
+      "USB/External Hard Drive Recovery",
       "Laptop & Desktop Data Retrieval",
-      "Malware or Ransomware Attacks Recovery",
+      "Malware/Spam Attacks Recovery",
     ],
     button: {
       text: "Request Data Recovery",
@@ -67,7 +68,9 @@ const pricing = [
       <template v-slot:desc>Simple & Afforable pricing. No Surprises.</template>
     </LandingSectionhead>
 
-    <div class="grid md:grid-flow-col gap-10 mx-auto max-w-screen-lg mt-12">
+    <div
+      class="grid justify-self-center justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-screen-lg mt-12"
+    >
       <LandingPricing v-for="item of pricing" :plan="item" />
     </div>
   </LandingContainer>

@@ -40,6 +40,7 @@ export default {
 
         ServiceHeader: "#404E71",
         ServicePrice: "#BED2EF",
+        ServicePriceOrg: "#FF0000",
         ServiceItems: "#404E71",
 
         FooterText: "#2CB6D5",
