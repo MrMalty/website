@@ -1,5 +1,5 @@
 <script setup>
-defineProps(["plan"]);
+defineProps(["item"]);
 
 onMounted(() => {
   const form = document.getElementById("form");
