@@ -26,7 +26,7 @@ const specials = [
     image: "nbm15f13mg218.jpg",
     button: {
       text: "Enquire",
-      link: "product",
+      link: "mailto:sales@kiallacomputers.com.au?Subject=Product Enquery nbm15f13mg21",
     },
   },
   {
@@ -47,7 +47,7 @@ const specials = [
     image: "nbasp1503cva-50.jpg",
     button: {
       text: "Enquire",
-      link: "product",
+      link: "mailto:sales@kiallacomputers.com.au?Subject=Product Enquery nbasp1503cva-50",
     },
   },
   {
@@ -68,7 +68,7 @@ const specials = [
     image: "moaocu34g4.jpg",
     button: {
       text: "Enquire",
-      link: "product",
+      link: "mailto:sales@kiallacomputers.com.au?Subject=Product Enquery moaocu34g4",
     },
   },
   {
@@ -89,7 +89,7 @@ const specials = [
     image: "nbasp5405csa-41.jpg",
     button: {
       text: "Enquire",
-      link: "product",
+      link: "mailto:sales@kiallacomputers.com.au?Subject=Product Enquery nbasp5405csa-41",
     },
   },
   {
@@ -112,7 +112,7 @@ const specials = [
     image: "sysgr55050-1t32.jpg",
     button: {
       text: "Enquire",
-      link: "product",
+      link: "mailto:sales@kiallacomputers.com.au?Subject=Product Enquery sysgr55050-1t32",
     },
   },
   {
@@ -134,7 +134,7 @@ const specials = [
     image: "sysgr565xt1t32.jpg",
     button: {
       text: "Enquire",
-      link: "product",
+      link: "mailto:sales@kiallacomputers.com.au?Subject=Product Enquery sysgr565xt1t32",
     },
   },
 ];

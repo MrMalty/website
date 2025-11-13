@@ -50,7 +50,7 @@ defineProps(["plan"]);
           :href="plan.button.link || '#'"
           block
           :styleName="plan.popular ? 'primary' : 'outline'"
-          :item="item"
+          :prodeq="plan"
         >
           {{ plan.button.text || "Get Started" }}
         </LandingLink>
